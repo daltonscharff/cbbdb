@@ -70,5 +70,4 @@ router.route('/characters/:id')
         }
     });
 
-
 module.exports = router;
