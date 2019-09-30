@@ -48,7 +48,10 @@ router.route('/episodes/:id')
 
             if (!episode) return res.status(404).send();
 
-            updates.forEach((update) => episode[update] = req.body[update]);
+            updates.forEach((update) => episode.set(update, req.body[update]));
+
+            episode.set('thisisatest', true);
+            console.log(episode);
 
             await episode.save();
             res.send(episode);

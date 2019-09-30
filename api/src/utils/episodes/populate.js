@@ -7,7 +7,7 @@ const RSSParser = require('rss-parser');
 /**
  * Fetches the episode data gathered from official Earwolf episode page
  * 
- * @returns {Object[]} An array of objects containing an episode's title, number,
+ * @returns {[Object]} An array of objects containing an episode's title, number,
  * guests, and whether or not the episode is a 'Best Of'
  */
 const getEarwolfData = async () => {
@@ -49,8 +49,8 @@ const getEarwolfData = async () => {
  * Fetches the episode data gathered from the Unofficial RSS Feeds for Stitcher 
  * Premium
  * 
- * @returns {Object[]} An array of objects containing an episodes name, number,
- * guests, and whether or not the episode is a 'Best Of'
+ * @returns {[Object]} An array of objects containing an episodes name, number,
+ * description, release date, and duration
  */
 const getStitcherData = async () => {
     const url = process.env.RSS_URL;
