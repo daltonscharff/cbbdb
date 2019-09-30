@@ -8,17 +8,15 @@ const characterSchema = new mongoose.Schema({
         trim: true
     },
     episodes: {
-        type: mongoose.Schema.Types.ObjectId,
+        type: [mongoose.Schema.Types.ObjectId],
         ref: 'Episode'
     },
     guests: {
-        type: mongoose.Schema.Types.ObjectId,
+        type: [mongoose.Schema.Types.ObjectId],
         ref: 'Guest'
-    },
-    other: {
-        type: Map,
-        of: String
     }
+}, {
+    strict: false
 });
 
 const Character = mongoose.model('Character', characterSchema);

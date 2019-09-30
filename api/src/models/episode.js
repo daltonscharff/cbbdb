@@ -7,18 +7,37 @@ const episodeSchema = new mongoose.Schema({
         required: true,
         trim: true
     },
+    number: {
+        type: Number,
+        unique: true,
+        required: true
+    },
+    bestOf: {
+        type: Boolean,
+        default: false
+    },
+    description: {
+        type: String,
+        trim: true
+    },
+    releaseDate: {
+        type: String,
+        trim: true
+    },
+    duration: {
+        type: String,
+        trim: true
+    },
     characters: {
-        type: mongoose.Schema.Types.ObjectId,
+        type: [mongoose.Schema.Types.ObjectId],
         ref: 'Character'
     },
     guests: {
-        type: mongoose.Schema.Types.ObjectId,
+        type: [mongoose.Schema.Types.ObjectId],
         ref: 'Guest'
-    },
-    other: {
-        type: Map,
-        of: String
     }
+}, {
+    strict: false
 });
 
 const Episode = mongoose.model('Episode', episodeSchema);
