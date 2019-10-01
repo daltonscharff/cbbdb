@@ -1,21 +1,21 @@
 const express = require('express');
 const Episode = require('../models/episode');
 const { getEarwolfData, getStitcherData } = require('../utils/episodes/populate');
+const { getGuestIds } = require('../utils/guests/populate');
 
 const router = new express.Router();
 
 router.get('/utils/episodes/earwolf', async (req, res) => {
-    let pulledEpisodes = [];
-    let updatedEpisodes = [];
+    let episodes = [];
 
     // try {
-    //     pulledEpisodes = await getEarwolfData();
+    //     episodes = await getEarwolfData();
     // } catch (e) {
     //     console.error({ action: 'Fetching Earwolf data', error: e });
     //     return res.status(500).send();
     // }
 
-    pulledEpisodes = [
+    episodes = [
         {
             "number": "620",
             "title": "Burbank is The Good Place",
@@ -40,26 +40,28 @@ router.get('/utils/episodes/earwolf', async (req, res) => {
     ];
 
     try {
-        for (let earwolfEpisode of pulledEpisodes) {
-            let databaseEpisode = await Episode.findOne({ number: earwolfEpisode.number }) || await Episode.findOne({ title: earwolfEpisode.title });
-            
-            delete earwolfEpisode.guests; //temp
+        episodes = episodes.map(async (earwolfEpisode) => {
+            let databaseEpisode = await Episode.findOne({ number: earwolfEpisode.number }) ||
+                await Episode.findOne({ title: earwolfEpisode.title }) ||
+                new Episode({
+                    title: earwolfEpisode.title,
+                    number: earwolfEpisode.number
+                });
 
-            if (databaseEpisode) {
-                const updates = Object.keys(earwolfEpisode);
-                updates.forEach((update) => databaseEpisode.set(update, earwolfEpisode[update]));
-            } else {
-                databaseEpisode = new Episode({ ...earwolfEpisode });
-            }
+            earwolfEpisode.guests = getGuestIds({ guests: earwolfEpisode.guests, episodeIds: [databaseEpisode._id] });
+
+            const updates = Object.keys(earwolfEpisode);
+            updates.forEach((update) => databaseEpisode.set(update, earwolfEpisode[update]));
+
             await databaseEpisode.save();
-            updatedEpisodes.push(databaseEpisode);
-        }
+            return databaseEpisode;
+        });
     } catch (e) {
         console.error({ action: 'Writing Earwolf data to database', error: e });
         return res.status(500).send();
     }
 
-    res.send(updatedEpisodes);
+    res.send(await Promise.all(episodes));
 });
 
 router.get('/utils/episodes/stitcher', async (req, res) => {
