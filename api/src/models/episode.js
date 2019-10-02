@@ -8,9 +8,10 @@ const episodeSchema = new mongoose.Schema({
         trim: true
     },
     number: {
-        type: Number,
+        type: String,
         unique: true,
-        required: true
+        required: true,
+        trim: true
     },
     bestOf: {
         type: Boolean,
