@@ -11,7 +11,7 @@ router.route('/characters')
             const characters = await Character.find({});
             res.send(characters);
         } catch (e) {
-            res.status(500).send(e);
+            res.status(500).send();
             console.error({ error: e, method: req.method, url: req.url });
         }
     })
@@ -22,7 +22,7 @@ router.route('/characters')
             await character.save();
             res.status(201).send(character);
         } catch (e) {
-            res.status(400).send(e);
+            res.status(400).send();
             console.error({ error: e, method: req.method, url: req.url });
         }
     });
@@ -36,7 +36,7 @@ router.route('/characters/:id')
 
             res.send(character);
         } catch (e) {
-            res.status(500).send(e);
+            res.status(500).send();
             console.error({ error: e, method: req.method, url: req.url });
         }
     })
@@ -53,7 +53,7 @@ router.route('/characters/:id')
             await character.save();
             res.send(character);
         } catch (e) {
-            res.status(500).send(e);
+            res.status(500).send();
             console.error({ error: e, method: req.method, url: req.url });
         }
     })
@@ -65,7 +65,7 @@ router.route('/characters/:id')
     
             res.send(character);
         } catch (e) {
-            res.status(500).send(e);
+            res.status(500).send();
             console.error({ error: e, method: req.method, url: req.url });
         }
     });

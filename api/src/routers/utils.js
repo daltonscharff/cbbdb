@@ -12,8 +12,8 @@ router.get('/utils/populate', async (req, res) => {
 
         res.send(await populate(earwolfData, stitcherData));
     } catch (e) {
-        console.log(e);
-        res.status(500).send(e);
+        res.status(500).send();
+        console.error({ error: e, method: req.method, url: req.url });
     }
 });
 
@@ -21,8 +21,8 @@ router.get('/utils/earwolf', async (req, res) => {
     try {
         res.send(await earwolf.getData());
     } catch (e) {
-        console.log(e);
-        res.status(500).send(e);
+        res.status(500).send();
+        console.error({ error: e, method: req.method, url: req.url });
     }
 });
 
@@ -30,8 +30,8 @@ router.get('/utils/stitcher', async (req, res) => {
     try {
         res.send(await stitcher.getData());
     } catch (e) {
-        console.log(e);
-        res.status(500).send(e);
+        res.status(500).send();
+        console.error({ error: e, method: req.method, url: req.url });
     }
 });
 

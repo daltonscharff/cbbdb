@@ -11,7 +11,7 @@ router.route('/episodes')
             const episode = await Episode.find({});
             res.send(episode);
         } catch (e) {
-            res.status(500).send(e);
+            res.status(500).send();
             console.error({ error: e, method: req.method, url: req.url });
         }
     })
@@ -36,7 +36,7 @@ router.route('/episodes/:id')
 
             res.send(episode);
         } catch (e) {
-            res.status(500).send(e);
+            res.status(500).send();
             console.error({ error: e, method: req.method, url: req.url });
         }
     })
@@ -50,13 +50,10 @@ router.route('/episodes/:id')
 
             updates.forEach((update) => episode.set(update, req.body[update]));
 
-            episode.set('thisisatest', true);
-            console.log(episode);
-
             await episode.save();
             res.send(episode);
         } catch (e) {
-            res.status(500).send(e);
+            res.status(500).send();
             console.error({ error: e, method: req.method, url: req.url });
         }
     })
@@ -68,7 +65,7 @@ router.route('/episodes/:id')
     
             res.send(episode);
         } catch (e) {
-            res.status(500).send(e);
+            res.status(500).send();
             console.error({ error: e, method: req.method, url: req.url });
         }
     });

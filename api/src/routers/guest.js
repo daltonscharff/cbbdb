@@ -11,7 +11,7 @@ router.route('/guests')
             const guests = await Guest.find({});
             res.send(guests);
         } catch (e) {
-            res.status(500).send(e);
+            res.status(500).send();
             console.error({ error: e, method: req.method, url: req.url });
         }
     })
@@ -36,7 +36,7 @@ router.route('/guests/:id')
 
             res.send(guest);
         } catch (e) {
-            res.status(500).send(e);
+            res.status(500).send();
             console.error({ error: e, method: req.method, url: req.url });
         }
     })
@@ -53,7 +53,7 @@ router.route('/guests/:id')
             await guest.save();
             res.send(guest);
         } catch (e) {
-            res.status(500).send(e);
+            res.status(500).send();
             console.error({ error: e, method: req.method, url: req.url });
         }
     })
@@ -65,7 +65,7 @@ router.route('/guests/:id')
     
             res.send(guest);
         } catch (e) {
-            res.status(500).send(e);
+            res.status(500).send();
             console.error({ error: e, method: req.method, url: req.url });
         }
     });
