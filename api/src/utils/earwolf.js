@@ -12,7 +12,10 @@ const getData = async () => {
     const html = await (await fetch(url)).text();
     const liArray = parse5.parseFragment(html).childNodes.find((node) => node.tagName === 'ul').childNodes.filter((node) => node.tagName === 'li');
 
-    const episodes = liArray.map((li) => {
+    let episodes = [];
+    let errors = [];
+
+    for (let li of liArray) {
         const pattern = /Ep\s#((?:B?O?)(\d+(?:\.\d)?))/;
 
         const findTextValue = (element) => {
@@ -21,24 +24,21 @@ const getData = async () => {
         };
 
         let episode = {};
+
         try {
-            episode = {
-                number: findTextValue(li).match(pattern)[1],
-
-                title: findTextValue(li.childNodes.find((node) => node.tagName === 'a')),
-
-                guests: li.childNodes.filter((node) => node.tagName === 'span').map((node) => findTextValue(node)).filter((guest) => guest),
-
-                bestOf: !!findTextValue(li).match(/BO\d+/)
-            };
+            episode.number = findTextValue(li).match(pattern)[1];
+            episode.title = findTextValue(li.childNodes.find((node) => node.tagName === 'a'));
+            episode.guests = li.childNodes.filter((node) => node.tagName === 'span').map((node) => findTextValue(node)).filter((guest) => guest);
+            episode.bestOf = !!findTextValue(li).match(/BO\d+/);
         } catch (e) {
-            console.error(`ERROR: ${findTextValue(li)}`);
+            errors.push(parse5.serialize(li));
+            continue;
         }
 
-        return episode.number ? episode : undefined;
-    });
+        episodes.push(episode);
+    }
 
-    return episodes.filter((episode) => episode);
+    return { episodes, errors };
 };
 
 module.exports = { getData };
