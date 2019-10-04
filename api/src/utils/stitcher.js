@@ -16,9 +16,10 @@ const getData = async () => {
     let items = (await parser.parseString(xml)).items;
 
     const numberPattern1 = /^(\d{1,3})(?:\.|.*,)/;
-    const numberPattern2 = /^(?:best\sof)\s(\d{4})\s(?:pt.?\s(\d+))?/i;
+    const numberPattern2 = /^best\sof\s(\d{4})(?:\spt.?\s(\d+))?/i;
 
     let episodes = [];
+    let incompletes = [];
     let errors = [];
 
     // initial pass
@@ -31,7 +32,7 @@ const getData = async () => {
             } else if (item.title.match(numberPattern2)) {
                 const groups = item.title.match(numberPattern2);
                 episode.number = `BO${groups[1]}`;
-                if (groups.length > 2) episode.number += `.${groups[2]}`;
+                if (groups[2]) episode.number += `.${groups[2]}`;
             }
             episode.title = item.title;
             episode.description = item.content;
@@ -46,37 +47,45 @@ const getData = async () => {
     }
 
     // fill in missing episode numbers if possible
-    let fixes = [];
     for (let i in episodes) {
         if (episodes[i].number) continue;
         if (i - 1 > 0 && !episodes[i - 1].number) continue;
 
-
-        let countFromI = 0;
-        let differenceBetweenNumberedEpisodes = 0;
-        for (j = i; j < episodes.length; j++) {
-            if (episodes[j].number) {
-                if (episodes[j].number.match(/bo.*/i)) {
-                    continue;
-                } else {
-                    differenceBetweenNumberedEpisodes = episodes[i - 1].number - episodes[j].number;
-                    break;
-                }
+        const prevIndexWithNumber = ((j) => {
+            for (j; j > 0; j--) {
+                if (!episodes[j].number) continue;
+                if (episodes[j].number.match(/bo.*/i)) continue;
+                return j;
             }
-            countFromI++;
+        })(i);
+
+        const nextIndexWithNumber = ((j) => {
+            for (j; j < episodes.length; j++) {
+                if (!episodes[j].number) continue;
+                if (episodes[j].number.match(/bo.*/i)) continue;
+                return j;
+            }
+        })(i);
+
+        const stepsBetween = ((prev, next) => {
+            let count = 0;
+            while (prev < next) {
+                if (!episodes[prev].number || (episodes[prev].number && !episodes[prev].number.match(/bo.*/i))) {
+                    count++;
+                }
+                prev++;
+            }
+            return count;
+        })(prevIndexWithNumber, nextIndexWithNumber);
+
+        if (stepsBetween === (episodes[prevIndexWithNumber].number - episodes[nextIndexWithNumber].number)) {
+            episodes[i].number = (episodes[prevIndexWithNumber].number - 1).toString(10);
         }
 
-        if (countFromI + 1 === differenceBetweenNumberedEpisodes) {
-            episodes[i].number = episodes[i - 1].number - 1;
-            fixes.push(episodes[i]);
-        }
-
-
-        if (!episodes[i].number) errors.push(episodes[i]);
+        if (!episodes[i].number) incompletes.push(episodes[i]);
     }
-    console.log(fixes);
 
-    return { episodes, errors };
+    return { episodes, incompletes, errors };
 };
 
 module.exports = { getData };
