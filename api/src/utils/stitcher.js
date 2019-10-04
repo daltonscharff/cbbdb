@@ -15,7 +15,7 @@ const getData = async () => {
     const parser = new RSSParser;
     let items = (await parser.parseString(xml)).items;
 
-    const numberPattern1 = /^(\d{1,3})(?:\.|.*,)/;
+    const numberPattern1 = /^(\d{1,3}(\.\d)?)(?:\.|.*,)/;
     const numberPattern2 = /^best\sof\s(\d{4})(?:\spt.?\s(\d+))?/i;
 
     let episodes = [];
@@ -78,8 +78,10 @@ const getData = async () => {
             return count;
         })(prevIndexWithNumber, nextIndexWithNumber);
 
-        if (stepsBetween === (episodes[prevIndexWithNumber].number - episodes[nextIndexWithNumber].number)) {
-            episodes[i].number = (episodes[prevIndexWithNumber].number - 1).toString(10);
+        const diffBetween = Math.floor(episodes[prevIndexWithNumber].number) - Math.floor(episodes[nextIndexWithNumber].number);
+
+        if (stepsBetween === diffBetween) {
+            episodes[i].number = (Math.floor(episodes[prevIndexWithNumber].number) - 1).toString(10);
         }
 
         if (!episodes[i].number) incompletes.push(episodes[i]);
