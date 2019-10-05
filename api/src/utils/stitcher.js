@@ -15,8 +15,9 @@ const getData = async () => {
     const parser = new RSSParser;
     let items = (await parser.parseString(xml)).items;
 
-    const numberPattern1 = /^(\d{1,3}(\.\d)?)(?:\.|.*,)/;
+    const numberPattern1 = /^(\d{1,3}(\.\d)?)\D/;
     const numberPattern2 = /^best\sof\s(\d{4})(?:\spt.?\s(\d+))?/i;
+    const problemEpisodes = ["3 Witches and a Baby"];
 
     let episodes = [];
     let errors = [];
@@ -26,7 +27,7 @@ const getData = async () => {
         let episode = {};
 
         try {
-            if (item.title.match(numberPattern1)) {
+            if (item.title.match(numberPattern1) && !problemEpisodes.includes(item.title)) {
                 episode.number = item.title.match(numberPattern1)[1];
             } else if (item.title.match(numberPattern2)) {
                 const groups = item.title.match(numberPattern2);
@@ -48,7 +49,6 @@ const getData = async () => {
     // fill in missing episode numbers if possible
     for (let i in episodes) {
         if (episodes[i].number) continue;
-        if (i - 1 > 0 && !episodes[i - 1].number) continue;
 
         const prevIndexWithNumber = ((j) => {
             for (j; j > 0; j--) {
