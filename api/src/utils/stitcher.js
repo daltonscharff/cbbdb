@@ -19,7 +19,6 @@ const getData = async () => {
     const numberPattern2 = /^best\sof\s(\d{4})(?:\spt.?\s(\d+))?/i;
 
     let episodes = [];
-    let incompletes = [];
     let errors = [];
 
     // initial pass
@@ -84,10 +83,10 @@ const getData = async () => {
             episodes[i].number = (Math.floor(episodes[prevIndexWithNumber].number) - 1).toString(10);
         }
 
-        if (!episodes[i].number) incompletes.push(episodes[i]);
+        if (!episodes[i].number) errors.push(episodes[i]);
     }
 
-    return { episodes, incompletes, errors };
+    return { episodes, errors };
 };
 
 module.exports = { getData };
