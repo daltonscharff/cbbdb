@@ -4,7 +4,7 @@ const parse5 = require('parse5');
 /**
  * Fetches the episode data gathered from official Earwolf episode page
  * 
- * @returns {[Object]} An array of objects containing an episode's title, number,
+ * @returns {Object[]} An array of objects containing an episode's title, number,
  * guests, and whether or not the episode is a 'Best Of'
  */
 const getData = async () => {

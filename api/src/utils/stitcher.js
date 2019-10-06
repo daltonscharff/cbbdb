@@ -6,7 +6,7 @@ const RSSParser = require('rss-parser');
  * Fetches the episode data gathered from the Unofficial RSS Feeds for Stitcher 
  * Premium
  * 
- * @returns {[Object]} An array of objects containing an episodes name, number,
+ * @returns {Object[]} An array of objects containing an episodes name, number,
  * description, release date, and duration
  */
 const getData = async () => {
