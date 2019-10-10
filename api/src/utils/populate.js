@@ -2,57 +2,82 @@ const Episode = require('../models/episode');
 const Guest = require('../models/guest');
 
 const populate = async (earwolfData, stitcherData) => {
-    let mergedData = await mergeData(earwolfData, stitcherData);
-    ({modifiedEpisodes, modifiedGuests} = await createDbObjects(mergedData));
+    let episodes = mergeEpisodes(earwolfData.episodes, stitcherData.episodes);
 
-    modifiedEpisodes.forEach((episode) => episode.save());
-    modifiedGuests.forEach((guest) => guest.save());
+    ({ modifiedEpisodes, modifiedGuests } = await saveToDatabase(episodes.merged));
 
-    return {modifiedGuests, modifiedGuests};
+    return { modifiedEpisodes: modifiedEpisodes.length, modifiedGuests:modifiedGuests.length, unmergedEpisodes: episodes.unmerged };
 };
 
-const mergeData = async (earwolfData, stitcherData) => {
-    return earwolfData.map((earwolfEpisode) => {
-        const stitcherEpisode = stitcherData.find((episode) => episode.number === earwolfEpisode.number || episode.title === earwolfEpisode.title);
+/**
+ * Combine data retrieved from Earwolf and Stitcher, returning merged and
+ * unmerged episodes
+ * 
+ * @param {Object[]} earwolfEpisodes 
+ * @param {Object[]} stitcherEpisodes 
+ */
+const mergeEpisodes = (earwolfEpisodes, stitcherEpisodes) => {
+    let merged = [];
 
-        delete stitcherEpisode.number
-        delete stitcherEpisode.title
+    for (let i = 0; i < earwolfEpisodes.length; i) {
+        const j = stitcherEpisodes.findIndex((episode) => episode.number === earwolfEpisodes[i].number || episode.title === earwolfEpisodes[i].title);
 
-        return {
+        if (j < 0) {
+            i++;
+            continue;
+        }
+
+        earwolfEpisode = earwolfEpisodes.splice(i, 1)[0];
+        stitcherEpisode = stitcherEpisodes.splice(j, 1)[0];
+
+        delete stitcherEpisode.number;
+        delete stitcherEpisode.title;
+
+        merged.push({
             ...earwolfEpisode,
             ...stitcherEpisode
-        };
-    });
+        });
+    }
+
+    return {
+        merged,
+        unmerged: {
+            earwolf: earwolfEpisodes,
+            stitcher: stitcherEpisodes
+        }
+    };
 };
 
-const createDbObjects = async (mergedData) => {
-    /**
-     * if episode already in database: skip
-     * else: make new episode with given attributes, making new guests as well
-     */
+/**
+ * If an episode does not yet exist in database, 
+ * then add the episode (and corresponding guests)
+ * 
+ * @param {Object[]} mergedEpisodes 
+ */
+const saveToDatabase = async (mergedEpisodes) => {
+    let modifiedEpisodes = new Set([]);
+    let modifiedGuests = new Set([]);
 
-    let modifiedEpisodes = [];
-    let modifiedGuests = [];
-
-    await Promise.all(mergedData.map(async (value) => {
-        if (await Episode.findOne({ number: value.number })) return;
-
-        const guests = await Promise.all(value.guests.map(async (guestName) => await Guest.findOne({ name: guestName }) || new Guest({ name: guestName })));
-
-        delete value.guests;
+    for (let mergedEpisode of mergedEpisodes) {
+        if (await Episode.findOne({ number: mergedEpisode.number })) continue;
 
         const episode = new Episode({
-            ...value,
-            guests: guests.map((guest) => guest._id)
+            ...mergedEpisode
         });
 
-        guests.forEach((guest) => guest.episodes = new Set(guest.episodes.concat(episode._id)))
+        episode.guests = await Promise.all(mergedEpisode.guests.map(async (guestName) => {
+            let guest = await Guest.findOne({ name: guestName }) || new Guest({ name: guestName });
+            guest.episodes.addToSet(episode._id);
+            modifiedGuests.add(guest);
+            await guest.save();
+            return guest._id;
+        }));
 
-        modifiedEpisodes.push(episode);
-        modifiedGuests = Array.from(new Set(modifiedGuests.concat(guests)));
-    }));
+        modifiedEpisodes.add(episode);
+        await episode.save();
+    }
 
-    return { modifiedEpisodes,  modifiedGuests };
+    return { modifiedEpisodes: [...modifiedEpisodes], modifiedGuests: [...modifiedGuests] };
 };
 
 module.exports = populate;
