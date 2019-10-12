@@ -10,6 +10,8 @@ const RSSParser = require('rss-parser');
  * description, release date, and duration
  */
 const getData = async () => {
+    process.stdout.write('Fetching Stitcher data...');
+
     const url = process.env.RSS_URL;
     const xml = await (await fetch(url)).text();
     const parser = new RSSParser;
@@ -86,6 +88,7 @@ const getData = async () => {
         if (!episodes[i].number) errors.push(episodes[i]);
     }
 
+    process.stdout.write(`OK { episodes: ${episodes.length}, errors: ${errors.length} }\n`);
     return { episodes, errors };
 };
 

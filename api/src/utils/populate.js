@@ -6,7 +6,10 @@ const populate = async (earwolfData, stitcherData) => {
 
     ({ modifiedEpisodes, modifiedGuests } = await saveToDatabase(episodes.merged));
 
-    return { modifiedEpisodes: modifiedEpisodes.length, modifiedGuests:modifiedGuests.length, unmergedEpisodes: episodes.unmerged };
+    return { 
+        modifiedEpisodes,
+        modifiedGuests, 
+        unmergedEpisodes: episodes.unmerged };
 };
 
 /**
@@ -17,6 +20,8 @@ const populate = async (earwolfData, stitcherData) => {
  * @param {Object[]} stitcherEpisodes 
  */
 const mergeEpisodes = (earwolfEpisodes, stitcherEpisodes) => {
+    process.stdout.write(`Merging episodes...`);
+
     let merged = [];
 
     for (let i = 0; i < earwolfEpisodes.length; i) {
@@ -39,6 +44,7 @@ const mergeEpisodes = (earwolfEpisodes, stitcherEpisodes) => {
         });
     }
 
+    process.stdout.write(`OK { merged: ${merged.length}, unmerged: ${earwolfEpisodes.length + stitcherEpisodes.length} }\n`);
     return {
         merged,
         unmerged: {
@@ -55,6 +61,8 @@ const mergeEpisodes = (earwolfEpisodes, stitcherEpisodes) => {
  * @param {Object[]} mergedEpisodes 
  */
 const saveToDatabase = async (mergedEpisodes) => {
+    process.stdout.write(`Writing episodes to database...`);
+
     let modifiedEpisodes = new Set([]);
     let modifiedGuests = new Set([]);
 
@@ -68,16 +76,17 @@ const saveToDatabase = async (mergedEpisodes) => {
         episode.guests = await Promise.all(mergedEpisode.guests.map(async (guestName) => {
             let guest = await Guest.findOne({ name: guestName }) || new Guest({ name: guestName });
             guest.episodes.addToSet(episode._id);
-            modifiedGuests.add(guest);
-            await guest.save();
+            modifiedGuests.add(guest.id);
+            guest.save();
             return guest._id;
         }));
 
-        modifiedEpisodes.add(episode);
-        await episode.save();
+        modifiedEpisodes.add(episode.id);
+        episode.save();
     }
 
-    return { modifiedEpisodes: [...modifiedEpisodes], modifiedGuests: [...modifiedGuests] };
+    process.stdout.write(`OK { modifiedEpisodes: ${modifiedEpisodes.size}, modifiedGuests: ${modifiedGuests.size} }\n`);
+    return { modifiedEpisodes: Array.from(modifiedEpisodes), modifiedGuests: Array.from(modifiedGuests) };
 };
 
 module.exports = populate;

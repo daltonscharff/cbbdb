@@ -8,6 +8,8 @@ const parse5 = require('parse5');
  * guests, and whether or not the episode is a 'Best Of'
  */
 const getData = async () => {
+    process.stdout.write('Fetching Earwolf data...');
+
     const url = 'https://www.earwolf.com/alleps-ajax.php?show=9';
     const html = await (await fetch(url)).text();
     const liArray = parse5.parseFragment(html).childNodes.find((node) => node.tagName === 'ul').childNodes.filter((node) => node.tagName === 'li');
@@ -38,6 +40,7 @@ const getData = async () => {
         episodes.push(episode);
     }
 
+    process.stdout.write(`OK { episodes: ${episodes.length}, errors: ${errors.length} }\n`);
     return { episodes, errors };
 };
 
