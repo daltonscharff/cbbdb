@@ -7,14 +7,14 @@ const guestSchema = new mongoose.Schema({
         required: true,
         trim: true
     },
-    characters: {
-        type: [mongoose.Schema.Types.ObjectId],
+    characters: [{
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'Character'
-    },
-    episodes: {
-        type: [mongoose.Schema.Types.ObjectId],
+    }],
+    episodes: [{
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'Episode'
-    }
+    }]
 }, {
     strict: false
 });

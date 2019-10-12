@@ -29,14 +29,14 @@ const episodeSchema = new mongoose.Schema({
         type: String,
         trim: true
     },
-    characters: {
-        type: [mongoose.Schema.Types.ObjectId],
+    characters: [{
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'Character'
-    },
-    guests: {
-        type: [mongoose.Schema.Types.ObjectId],
+    }],
+    guests: [{
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'Guest'
-    }
+    }]
 }, {
     strict: false
 });
