@@ -34,6 +34,11 @@ router.route('/episodes/:id')
 
             if (!episode) return res.status(404).send();
 
+            console.log(await episode.populate({
+                path: 'guests',
+                select: '_id name',
+            }).execPopulate());
+
             res.send(episode);
         } catch (e) {
             res.status(500).send();
@@ -59,11 +64,11 @@ router.route('/episodes/:id')
     })
     .delete(async (req, res) => {
         try {
-            const episode = await Episode.findOneAndDelete({ _id: req.params.id });
+            const episode = await Episode.findById(req.params.id);
     
             if (!episode) return res.status(404).send();
     
-            res.send(episode);
+            res.send(await episode.remove());
         } catch (e) {
             res.status(500).send();
             console.error({ error: e, method: req.method, url: req.url });

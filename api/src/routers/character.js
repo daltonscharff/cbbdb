@@ -59,11 +59,11 @@ router.route('/characters/:id')
     })
     .delete(async (req, res) => {
         try {
-            const character = await Character.findOneAndDelete({ _id: req.params.id });
+            const character = await Character.findById(req.params.id);
     
             if (!character) return res.status(404).send();
     
-            res.send(character);
+            res.send(await character.remove());
         } catch (e) {
             res.status(500).send();
             console.error({ error: e, method: req.method, url: req.url });

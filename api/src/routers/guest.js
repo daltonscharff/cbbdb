@@ -59,11 +59,11 @@ router.route('/guests/:id')
     })
     .delete(async (req, res) => {
         try {
-            const guest = await Guest.findOneAndDelete({ _id: req.params.id });
+            const guest = await Guest.findById(req.params.id);
     
             if (!guest) return res.status(404).send();
     
-            res.send(guest);
+            res.send(await guest.remove());
         } catch (e) {
             res.status(500).send();
             console.error({ error: e, method: req.method, url: req.url });
