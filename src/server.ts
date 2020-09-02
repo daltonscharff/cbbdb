@@ -1,7 +1,7 @@
 import express from "express";
-import characterRouter from "./routes/character.router";
-import episodeRouter from "./routes/episode.router";
-import guestsRouter from "./routes/guest.router";
+import characterRouter from "./routes/character-router";
+import episodeRouter from "./routes/episode-router";
+import guestsRouter from "./routes/guest-router";
 
 
 const app: express.Application = express();
