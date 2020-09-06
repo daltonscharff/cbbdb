@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
-function connect(connectionString: string): void {
-    mongoose.connect(connectionString, {
+function connect(connectionString: string): Promise<mongoose.Mongoose> {
+    return mongoose.connect(connectionString, {
         useNewUrlParser: true,
         useUnifiedTopology: true
     }, (err: mongoose.Error) => {
@@ -14,8 +14,8 @@ function connect(connectionString: string): void {
     });
 };
 
-function disconnect(): void {
-    mongoose.disconnect()
+function disconnect(): Promise<void> {
+    return mongoose.disconnect()
         .then(() => console.log("Disconnected from database"))
         .catch(() => console.error("Error while disconnecting from database"));
 }
