@@ -1,28 +1,44 @@
 import { Request, Response, NextFunction } from "express";
+import Character from "../models/character.model";
+import mongoose from "mongoose";
 
-function getCharacter(req: Request, res: Response, next: NextFunction): void {
-    res.send(["get"]);
+async function handleGet(req: Request, res: Response, next: NextFunction): Promise<void> {
+    const characterId: string = req.params.characterId;
+    if (characterId) {
+        let character;
+        if (mongoose.Types.ObjectId.isValid(characterId)) {
+            character = await Character.find({ _id: characterId });
+        }
+        if (character) {
+            res.send(character);
+        } else {
+            res.status(404).send();
+        }
+        res.send();
+    } else {
+        res.send(await Character.find({}));
+    }
     next();
 }
 
-function createCharacter(req: Request, res: Response, next: NextFunction): void {
+async function handlePost(req: Request, res: Response, next: NextFunction): Promise<void> {
     res.send(["post"]);
     next();
 }
 
-function replaceCharacter(req: Request, res: Response, next: NextFunction): void {
+async function handlePut(req: Request, res: Response, next: NextFunction): Promise<void> {
     res.send(["put"]);
     next();
 }
 
-function updateCharacter(req: Request, res: Response, next: NextFunction): void {
+async function handlePatch(req: Request, res: Response, next: NextFunction): Promise<void> {
     res.send(["patch"]);
     next();
 }
 
-function deleteCharacter(req: Request, res: Response, next: NextFunction): void {
+async function handleDelete(req: Request, res: Response, next: NextFunction): Promise<void> {
     res.send(["delete"]);
     next();
 }
 
-export { getCharacter, createCharacter, replaceCharacter, updateCharacter, deleteCharacter };
+export { handleGet, handlePost, handlePut, handlePatch, handleDelete };

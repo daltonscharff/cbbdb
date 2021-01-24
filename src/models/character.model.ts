@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const characterSchema = new mongoose.Schema({
+const schema = new mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
     name: {
         type: String,
@@ -8,6 +8,6 @@ const characterSchema = new mongoose.Schema({
     }
 }, { strict: false });
 
-const Character = mongoose.model('Character', characterSchema);
+const Character = mongoose.model('Character', schema);
 
-export { Character as default, characterSchema };
+export { Character as default, schema };

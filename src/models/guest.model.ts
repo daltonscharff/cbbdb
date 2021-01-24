@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const guestSchema = new mongoose.Schema({
+const schema = new mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
     name: {
         type: String,
@@ -12,6 +12,6 @@ const guestSchema = new mongoose.Schema({
     }
 }, { strict: false });
 
-const Guest = mongoose.model('Guest', guestSchema);
+const Guest = mongoose.model('Guest', schema);
 
-export { Guest as default, guestSchema };
+export { Guest as default, schema };

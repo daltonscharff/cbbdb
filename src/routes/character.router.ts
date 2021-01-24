@@ -1,5 +1,11 @@
 import express from "express";
-import * as characterController from "../controllers/character.controller";
+import {
+    handleGet,
+    handlePost,
+    handlePut,
+    handlePatch,
+    handleDelete
+} from "../controllers/character.controller";
 
 // https://www.coreycleary.me/what-is-the-difference-between-controllers-and-services-in-node-rest-apis/
 // https://www.restapitutorial.com/lessons/httpmethods.html
@@ -7,15 +13,15 @@ import * as characterController from "../controllers/character.controller";
 const router: express.Router = express.Router();
 
 router.route("/")
-    .get(characterController.getCharacter)
-    .post(characterController.createCharacter)
+    .get(handleGet)
+    .post(handlePost)
 
 router.route("/:characterId")
-    .get(characterController.getCharacter)
-    .post(characterController.createCharacter)
-    .put(characterController.replaceCharacter)
-    .patch(characterController.updateCharacter)
-    .delete(characterController.deleteCharacter)
+    .get(handleGet)
+    .post(handlePost)
+    .put(handlePut)
+    .patch(handlePatch)
+    .delete(handleDelete)
 
 
 export { router as default };

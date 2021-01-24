@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const episodeSchema = new mongoose.Schema({
+const schema = new mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
     title: {
         type: String,
@@ -16,6 +16,6 @@ const episodeSchema = new mongoose.Schema({
     }
 }, { strict: false });
 
-const Episode = mongoose.model('Episode', episodeSchema);
+const Episode = mongoose.model('Episode', schema);
 
-export { Episode as default, episodeSchema };
+export { Episode as default, schema };
