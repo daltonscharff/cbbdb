@@ -7,7 +7,7 @@ from earwolf import Earwolf
 import process
 
 load_dotenv()
-logging.basicConfig(format='%(asctime)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S')
+logging.basicConfig(format='%(asctime)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S', filename=('scrape.log'))
 
 async def main():
   premium_rss = RSS(os.getenv("PREMIUM_RSS_FEED"))
@@ -20,6 +20,7 @@ async def main():
 
   episodes = process.join_episodes(premium_rss.episodes, earwolf.episodes)
 
-  print(process.generate_sql(episodes))
+  with open("scrape.sql", "w") as f:
+    f.write(process.generate_sql(episodes))
 
 asyncio.run(main())
