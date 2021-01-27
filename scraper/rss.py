@@ -58,7 +58,7 @@ class RSS:
     if len(guests_parse) > 0:
       return [g.strip() for g in guests_parse[0].split(',')]
     else:
-      return None
+      return []
   
   def parse_best_of(self, s: str) -> bool:
     return re.search(self.best_of_regex, s) is not None

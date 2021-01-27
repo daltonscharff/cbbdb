@@ -11,7 +11,7 @@ class Episode:
   live: bool
   earwolf_url: str
 
-  def __init__(self, release_date=None, number=None, best_of=None, title=None, earwolf_url=None, guests=None, live=None) -> None:
+  def __init__(self, release_date=None, number=None, best_of=None, title=None, earwolf_url=None, guests=[], live=None) -> None:
     self.number = number
     self.release_date = release_date
     self.title = title
@@ -51,7 +51,7 @@ def join_episodes(a, b) -> List[Episode]:
       number = ep.number,
       release_date = ep.release_date,
       title = b_ep.title,
-      guests = ep.guests if not ep.guests or len(ep.guests) >= len(b_ep.guests) else b_ep.guests,
+      guests = ep.guests if len(ep.guests) >= len(b_ep.guests) else b_ep.guests,
       best_of = ep.best_of,
       live = ep.live,
       earwolf_url = b_ep.earwolf_url,
