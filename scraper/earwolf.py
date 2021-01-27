@@ -5,23 +5,10 @@ import datetime
 import asyncio
 import process
 
-class Episode(process.Episode):
-  title: str
-  earwolf_url: str
-  guests: List[str]
-
-  def __init__(self, number=None, best_of=None, title=None, earwolf_url=None, guests=None, live=None) -> None:
-    self.number = number
-    self.best_of = best_of
-    self.title = title
-    self.earwolf_url = earwolf_url
-    self.guests = guests
-    self.live = live
-
 class Earwolf():
   url: str
   live: bool
-  episodes: List[Episode]
+  episodes: List[process.Episode]
 
   best_of_regex = "^<li>Ep #BO(\d{4}.\d)"
   number_regex = "^<li>Ep #(\d+)"
@@ -36,7 +23,7 @@ class Earwolf():
     soup = BeautifulSoup(raw, "html.parser")
     li = soup.find_all("li")
 
-    self.episodes = [Episode(
+    self.episodes = [process.Episode(
       number=self.parse_number(str(l)),
       best_of=self.parse_best_of(str(l)),
       title=l.a.string,

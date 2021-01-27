@@ -19,4 +19,10 @@ async def main():
   # print([vars(e) for e in premium_rss.episodes[:2]])
   # print([vars(e) for e in earwolf.episodes[:2]])
 
+  episodes = process.join_episodes(premium_rss.episodes, earwolf.episodes)
+
+  for e in episodes[:10]:
+    print(vars(e))
+    print("\n")
+
 asyncio.run(main())

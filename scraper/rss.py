@@ -5,21 +5,10 @@ import datetime
 import asyncio
 import process
 
-class Episode(process.Episode):
-  release_date: str
-  guests: List[str]
-
-  def __init__(self, release_date=None, number=None, guests=None, best_of=None, live=None) -> None:
-    self.release_date = release_date
-    self.number = number
-    self.guests = guests
-    self.best_of = best_of
-    self.live = live
-
 class RSS:
   feed: str
   live: bool
-  episodes: List[Episode]
+  episodes: List[process.Episode]
 
   best_of_regex = "Best of (\d{4}) Pa?r?t.?\s?(\d)"
   number_regex = "^(\d+)"
@@ -35,7 +24,7 @@ class RSS:
     soup = BeautifulSoup(raw, "xml")
     items = soup.find_all("item")
     
-    self.episodes = [Episode(
+    self.episodes = [process.Episode(
       release_date=self.parse_release_date(i.pubDate.string),
       number=self.parse_number(i.title.string),
       guests=self.parse_guests(i.title.string),
