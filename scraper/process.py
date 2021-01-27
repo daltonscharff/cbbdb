@@ -1,4 +1,5 @@
 import requests
+import logging
 from typing import List
 
 class Episode:
@@ -42,7 +43,7 @@ def join_episodes(a, b) -> List[Episode]:
     try:
       b_index = b.index(ep)
     except:
-      print(f"Could not find {vars(ep)}")
+      logging.warning(f"Could not join on episode: {vars(ep)}")
       continue
 
     b_ep = b[b_index]
@@ -57,3 +58,26 @@ def join_episodes(a, b) -> List[Episode]:
     ))
   
   return episodes
+
+def generate_sql(episodes: List[Episode]) -> str:
+  sql_stmt = "-- EPISODES\n"
+  guest_names = set()
+  bool_to_string = lambda x: str(x).lower()
+
+  for ep in episodes:
+    sql_stmt += f"INSERT INTO episodes (release_date, number, title, best_of, live) VALUES ('{ep.release_date}', {ep.number}, '{ep.title}', {bool_to_string(ep.best_of)}, {bool_to_string(ep.live)});\n"
+    for guest in ep.guests:
+      guest_names.add(guest)
+
+  sql_stmt += "\n-- GUESTS\n"
+
+  for name in guest_names:
+    sql_stmt += f"INSERT INTO guests (name) VALUES ('{name}');\n"
+  
+  sql_stmt += "\n-- EPISODES GUESTS\n"
+
+  for ep in episodes:
+    for guest in ep.guests:
+      sql_stmt += f"INSERT INTO episodes_guests_2 (guests_id, episodes_id) VALUES ((SELECT id FROM episodes WHERE number = {ep.number} AND best_of = {bool_to_string(ep.best_of)} AND live = {bool_to_string(ep.live)}), (SELECT id FROM guests WHERE name = '{guest}'));\n"
+
+  return sql_stmt

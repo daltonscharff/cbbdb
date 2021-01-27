@@ -3,6 +3,7 @@ from typing import List
 import re
 import datetime
 import asyncio
+import logging
 import process
 
 class RSS:
@@ -19,7 +20,7 @@ class RSS:
     self.live = live
   
   async def get_episodes(self):
-    print("STARTING RSS")
+    logging.debug("STARTING RSS")
     raw = process.fetch(self.feed)
     soup = BeautifulSoup(raw, "xml")
     items = soup.find_all("item")
@@ -32,7 +33,7 @@ class RSS:
       live=self.live
       ) for i in items]
 
-    print("RSS DONE")
+    logging.debug("RSS DONE")
     
   def parse_release_date(self, s: str) -> str:
     dt = datetime.datetime.strptime(s, "%a, %d %b %Y %H:%M:%S %Z")
@@ -48,7 +49,7 @@ class RSS:
       try:
         return re.findall(self.number_regex, s)[0]
       except:
-        # print(f"Could not parse number for {s}")
+        logging.warning(f"Could not parse number for {s}")
         return None
   
   def parse_guests(self, s: str) -> List[str]:

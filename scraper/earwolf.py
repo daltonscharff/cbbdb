@@ -3,6 +3,7 @@ from typing import List
 import re
 import datetime
 import asyncio
+import logging
 import process
 
 class Earwolf():
@@ -18,7 +19,7 @@ class Earwolf():
     self.live = live
 
   async def get_episodes(self):
-    print("STARTING EARWOLF")
+    logging.debug("STARTING EARWOLF")
     raw = process.fetch(self.url)
     soup = BeautifulSoup(raw, "html.parser")
     li = soup.find_all("li")
@@ -31,7 +32,7 @@ class Earwolf():
       guests=[i.string for i in l.find_all("span")],
       live=self.live
     ) for l in li]
-    print("EARWOLF DONE")
+    logging.debug("EARWOLF DONE")
 
   def parse_number(self, s: str) -> float:
     best_of_parse = re.findall(self.best_of_regex, s)
@@ -42,7 +43,7 @@ class Earwolf():
       try:
         return re.findall(self.number_regex, s)[0]
       except:
-        # print(f"Could not parse number for {s}")
+        logging.warning(f"Could not parse number for {s}")
         return None
 
   def parse_best_of(self, s: str) -> bool:

@@ -1,11 +1,13 @@
 from dotenv import load_dotenv
 import os
 import asyncio
+import logging
 from rss import RSS
 from earwolf import Earwolf
 import process
 
 load_dotenv()
+logging.basicConfig(format='%(asctime)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 
 async def main():
   premium_rss = RSS(os.getenv("PREMIUM_RSS_FEED"))
@@ -16,13 +18,8 @@ async def main():
     asyncio.create_task(earwolf.get_episodes())
   )
 
-  # print([vars(e) for e in premium_rss.episodes[:2]])
-  # print([vars(e) for e in earwolf.episodes[:2]])
-
   episodes = process.join_episodes(premium_rss.episodes, earwolf.episodes)
 
-  for e in episodes[:10]:
-    print(vars(e))
-    print("\n")
+  print(process.generate_sql(episodes))
 
 asyncio.run(main())
