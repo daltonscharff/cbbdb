@@ -40,6 +40,10 @@ def join_episodes(a, b) -> List[Episode]:
   episodes = []
 
   for ep in a:
+    if not ep.number:
+      logging.info(f"Episode has no number: {vars(ep)}")
+      continue
+
     try:
       b_index = b.index(ep)
     except:
@@ -47,11 +51,15 @@ def join_episodes(a, b) -> List[Episode]:
       continue
 
     b_ep = b[b_index]
+    if not b_ep.title:
+      logging.info(f"Episode has no title: {vars(ep)}")
+      continue
+    
     episodes.append(Episode(
       number = ep.number,
       release_date = ep.release_date,
       title = b_ep.title,
-      guests = ep.guests if len(ep.guests) >= len(b_ep.guests) else b_ep.guests,
+      guests = ep.guests if len(ep.guests) >= len(b_ep.guests) else [],
       best_of = ep.best_of,
       live = ep.live,
       earwolf_url = b_ep.earwolf_url,
@@ -63,21 +71,22 @@ def generate_sql(episodes: List[Episode]) -> str:
   sql_stmt = "-- EPISODES\n"
   guest_names = set()
   bool_to_string = lambda x: str(x).lower()
+  escape_string = lambda x: x.replace('\'', '\'\'')
 
   for ep in episodes:
-    sql_stmt += f"INSERT INTO episodes (release_date, number, title, best_of, live) VALUES ('{ep.release_date}', {ep.number}, '{ep.title}', {bool_to_string(ep.best_of)}, {bool_to_string(ep.live)});\n"
+    sql_stmt += f"INSERT INTO episodes (release_date, number, title, best_of, live) VALUES ('{ep.release_date}', {ep.number or -1}, '{escape_string(ep.title)}', {bool_to_string(ep.best_of)}, {bool_to_string(ep.live)});\n"
     for guest in ep.guests:
       guest_names.add(guest)
 
   sql_stmt += "\n-- GUESTS\n"
 
   for name in guest_names:
-    sql_stmt += f"INSERT INTO guests (name) VALUES ('{name}');\n"
+    sql_stmt += f"INSERT INTO guests (name) VALUES ('{escape_string(name)}');\n"
   
   sql_stmt += "\n-- EPISODES GUESTS\n"
 
   for ep in episodes:
     for guest in ep.guests:
-      sql_stmt += f"INSERT INTO episodes_guests_2 (guests_id, episodes_id) VALUES ((SELECT id FROM episodes WHERE number = {ep.number} AND best_of = {bool_to_string(ep.best_of)} AND live = {bool_to_string(ep.live)}), (SELECT id FROM guests WHERE name = '{guest}'));\n"
+      sql_stmt += f"INSERT INTO episodes_guests_2 (guests_id, episodes_id) VALUES ((SELECT id FROM episodes WHERE number = {ep.number} AND best_of = {bool_to_string(ep.best_of)} AND live = {bool_to_string(ep.live)}), (SELECT id FROM guests WHERE name = '{escape_string(guest)}'));\n"
 
   return sql_stmt
