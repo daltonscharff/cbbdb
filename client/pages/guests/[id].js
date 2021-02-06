@@ -1,30 +1,44 @@
-import ContentfulClient from "../../services/contentful"
+import { cc } from "../../services/contentful"
 
-export default function Guest(props) {
+export default function Guest({ guest, ...props }) {
   return (
     <div>
       <main>
-        <h1>
-          ID: {props.id}
-        </h1>
+        <p>ID: {guest.id}</p>
+        <p>Name: {guest.name}</p>
+        <p>Characters:
+          <ul>
+            {guest.characters.map(character => (
+              <li>
+                {character.name || character.id || '???'}
+              </li>
+            ))}
+          </ul>
+        </p>
+        <p>Episodes:
+          <ul>
+            {guest.episodes.map(episode => (
+              <li>
+                {episode.title || episode.id || '???'}
+              </li>
+            ))}
+          </ul>
+        </p>
       </main>
     </div>
   )
 }
 
 export async function getStaticProps(context) {
+  const guest = await cc.getGuest(context.params.id)
   return {
     props: {
-      id: context.params.id
+      guest
     }
   }
 }
 
 export async function getStaticPaths() {
-  let cc = new ContentfulClient();
-  cc.getGuests().then(a => {
-    console.log(a);
-  })
   const paths = (await cc.getGuests()).map(guest => ({
     params: {
       id: guest.id
