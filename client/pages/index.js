@@ -8,6 +8,7 @@ export default function Home() {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <button className="ui button">Follow</button>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
