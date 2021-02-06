@@ -9,8 +9,8 @@ export default function Character({ character, ...props }) {
         <p>Guests:
           <ul>
             {character.guests.map(guest => (
-              <li>
-                {guest.name || guest.id || '???'}
+              <li key={guest.id}>
+                {guest.name || guest.id}
               </li>
             ))}
           </ul>
@@ -18,8 +18,8 @@ export default function Character({ character, ...props }) {
         <p>Episodes:
           <ul>
             {character.episodes.map(episode => (
-              <li>
-                {episode.title || episode.id || '???'}
+              <li key={episode.id}>
+                {episode.title || episode.id}
               </li>
             ))}
           </ul>

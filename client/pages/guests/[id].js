@@ -9,8 +9,8 @@ export default function Guest({ guest, ...props }) {
         <p>Characters:
           <ul>
             {guest.characters.map(character => (
-              <li>
-                {character.name || character.id || '???'}
+              <li key={character.id}>
+                {character.name || character.id}
               </li>
             ))}
           </ul>
@@ -18,8 +18,8 @@ export default function Guest({ guest, ...props }) {
         <p>Episodes:
           <ul>
             {guest.episodes.map(episode => (
-              <li>
-                {episode.title || episode.id || '???'}
+              <li key={episode.id}>
+                {episode.title || episode.id}
               </li>
             ))}
           </ul>
