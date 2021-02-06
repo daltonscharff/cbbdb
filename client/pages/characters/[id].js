@@ -1,23 +1,23 @@
 import { cc } from "../../services/contentful"
 
-export default function Guest({ guest, ...props }) {
+export default function Character({ character, ...props }) {
   return (
     <div>
       <main>
-        <p>ID: {guest.id}</p>
-        <p>Name: {guest.name}</p>
-        <p>Characters:
+        <p>ID: {character.id}</p>
+        <p>Name: {character.name}</p>
+        <p>Guests:
           <ul>
-            {guest.characters.map(character => (
+            {character.guests.map(guest => (
               <li>
-                {character.name || character.id || '???'}
+                {guest.name || guest.id || '???'}
               </li>
             ))}
           </ul>
         </p>
         <p>Episodes:
           <ul>
-            {guest.episodes.map(episode => (
+            {character.episodes.map(episode => (
               <li>
                 {episode.title || episode.id || '???'}
               </li>
@@ -30,17 +30,18 @@ export default function Guest({ guest, ...props }) {
 }
 
 export async function getStaticProps(context) {
+  console.log(await cc.getCharacter(context.params.id))
   return {
     props: {
-      guest: await cc.getGuest(context.params.id)
+      character: await cc.getCharacter(context.params.id)
     }
   }
 }
 
 export async function getStaticPaths() {
-  const paths = (await cc.getGuests()).map(guest => ({
+  const paths = (await cc.getCharacters()).map(character => ({
     params: {
-      id: guest.id
+      id: character.id
     }
   }))
   return {
