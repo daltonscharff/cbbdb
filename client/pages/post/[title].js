@@ -1,22 +1,11 @@
-import Head from 'next/head'
-import styles from '../../styles/Home.module.css'
-import { useRouter } from 'next/router'
-
 export default function Home(props) {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>POSTS</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
+    <div>
+      <main>
+        <h1>
           Welcome to {props.title}
         </h1>
-
       </main>
-
     </div>
   )
 }
