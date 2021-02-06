@@ -13,7 +13,7 @@ export default function Episodes({ episodes, ...props }) {
           <div className="">
 
             <div className="">{episode.title}</div>
-            <div className="text-gray-500 text-md">Ep. 111</div>
+            <div className="text-gray-500 text-md">Ep. {episode.number}</div>
             <div className="">
               <div className="py-2">Description here.</div>
               <div className="flex">
