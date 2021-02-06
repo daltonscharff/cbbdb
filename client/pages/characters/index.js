@@ -16,10 +16,9 @@ export default function Characters({ characters, ...props }) {
 }
 
 export async function getStaticProps(context) {
-  const characters = await cc.getCharacters()
   return {
     props: {
-      characters
+      characters: await cc.getCharacters()
     }
   }
 }

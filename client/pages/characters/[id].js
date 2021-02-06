@@ -30,7 +30,6 @@ export default function Character({ character, ...props }) {
 }
 
 export async function getStaticProps(context) {
-  console.log(await cc.getCharacter(context.params.id))
   return {
     props: {
       character: await cc.getCharacter(context.params.id)

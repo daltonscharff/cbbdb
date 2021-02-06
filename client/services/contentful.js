@@ -31,6 +31,33 @@ class ContentfulClient {
     }));
   }
 
+  async getEpisodes() {
+    const episodes = await this.client.getEntries({
+      content_type: "episode"
+    })
+
+    return episodes.items.map((episode) => (
+      {
+        id: episode.sys.id,
+        ...episode.fields,
+        guests: episode.fields.guests.map((guest) => {
+          const guestEntry = episodes.includes.Entry.find(entry => entry.sys.id === guest.sys.id);
+          return {
+            id: guestEntry.sys.id,
+            name: guestEntry.fields.name
+          }
+        }),
+        characters: episode.fields.characters.map((character) => {
+          const characterEntry = episodes.includes.Entry.find(entry => entry.sys.id === character.sys.id);
+          return {
+            id: characterEntry.sys.id,
+            name: characterEntry.fields.name
+          }
+        })
+      }
+    ))
+  }
+
   async getGuest(id) {
     const guest = await this.client.getEntry(id);
     let characters = [];

@@ -16,10 +16,9 @@ export default function Guests({ guests, ...props }) {
 }
 
 export async function getStaticProps(context) {
-  const guests = await cc.getGuests()
   return {
     props: {
-      guests
+      guests: await cc.getGuests()
     }
   }
 }
