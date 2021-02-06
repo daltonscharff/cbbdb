@@ -2,12 +2,10 @@ import Link from 'next/link';
 import { cc } from "../services/contentful"
 
 export default function Episodes({ episodes, ...props }) {
-  console.log(episodes.map(ep => ep.guests))
-
   return (
     <div>
       {episodes.map(episode => (
-        <div key={episode.id}>
+        <div key={episode.id} id={episode.id}>
           <p>ID: {episode.id}</p>
           <p>Title: {episode.title}</p>
           <p>Characters:

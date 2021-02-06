@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { cc } from "../../services/contentful"
 
 export default function Character({ character, ...props }) {
@@ -9,18 +10,22 @@ export default function Character({ character, ...props }) {
         <p>Guests:
           <ul>
             {character.guests.map(guest => (
-              <li key={guest.id}>
-                {guest.name || guest.id}
-              </li>
+              <Link key={guest.id} href={`/guests/${guest.id}`}>
+                <li>
+                  {guest.name || guest.id}
+                </li>
+              </Link>
             ))}
           </ul>
         </p>
         <p>Episodes:
           <ul>
             {character.episodes.map(episode => (
-              <li key={episode.id}>
-                {episode.title || episode.id}
-              </li>
+              <Link key={episode.id} href={`/#${episode.id}`}>
+                <li>
+                  {episode.title || episode.id}
+                </li>
+              </Link>
             ))}
           </ul>
         </p>
