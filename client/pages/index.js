@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import dayjs from 'dayjs';
 import { cc } from "../services/contentful";
 import { Segment } from 'semantic-ui-react';
 import ListLayout from '../components/layouts/ListLayout';
@@ -18,7 +19,7 @@ export default function Episodes({ episodes }) {
             <div className="flex flex-row">
               <div className="text-left">{episode.number}</div>
               <div className="w-full font-bold px-4">{episode.title}</div>
-              <div className="w-48 text-right">{episode.releaseDate}</div>
+              <div className="w-48 text-right">{dayjs(episode.releaseDate).format("MMMM D, YYYY")}</div>
             </div>
           </Segment>
           <Segment className={`flex flex-col px-3 ${selected === episode.id ? "" : "hidden"}`}>
