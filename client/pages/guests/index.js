@@ -1,9 +1,10 @@
 import Link from 'next/link';
-import { cc } from "../../services/contentful"
+import { cc } from "../../services/contentful";
+import ListLayout from '../../components/layouts/ListLayout';
 
-export default function Guests({ guests, ...props }) {
+export default function Guests({ guests }) {
   return (
-    <div>
+    <ListLayout activePage="guests">
       {guests.map(guest => (
         <div key={guest.id}>
           <Link href={`/guests/${guest.id}`}>
@@ -11,7 +12,7 @@ export default function Guests({ guests, ...props }) {
           </Link>
         </div>
       ))}
-    </div>
+    </ListLayout>
   )
 }
 

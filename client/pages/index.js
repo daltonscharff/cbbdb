@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { cc } from "../services/contentful";
-import { Segment, Grid, List, Menu } from 'semantic-ui-react';
+import { Segment, Grid, List } from 'semantic-ui-react';
 import ListLayout from '../components/layouts/ListLayout';
 
-export default function Episodes({ episodes, ...props }) {
+export default function Episodes({ episodes }) {
   const [selectedEpisode, setSelectedEpisode] = useState(null);
 
   return (

@@ -1,9 +1,10 @@
 import Link from 'next/link';
-import { cc } from "../../services/contentful"
+import { cc } from "../../services/contentful";
+import ListLayout from '../../components/layouts/ListLayout';
 
-export default function Characters({ characters, ...props }) {
+export default function Characters({ characters }) {
   return (
-    <div>
+    <ListLayout activePage="characters">
       {characters.map(character => (
         <div key={character.id}>
           <Link href={`/characters/${character.id}`}>
@@ -11,7 +12,7 @@ export default function Characters({ characters, ...props }) {
           </Link>
         </div>
       ))}
-    </div>
+    </ListLayout>
   )
 }
 

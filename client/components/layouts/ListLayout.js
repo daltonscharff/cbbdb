@@ -15,20 +15,20 @@ export default function ListLayout({ activePage, children }) {
           Episodes
         </Menu.Item>
         <Menu.Item
-          name="characters"
-          active={activePage === "characters"}
-          link
-          onClick={() => router.push("/characters")}
-        >
-          Characters
-        </Menu.Item>
-        <Menu.Item
           name="guests"
           active={activePage === "guests"}
           link
           onClick={() => router.push("/guests")}
         >
           Guests
+        </Menu.Item>
+        <Menu.Item
+          name="characters"
+          active={activePage === "characters"}
+          link
+          onClick={() => router.push("/characters")}
+        >
+          Characters
         </Menu.Item>
       </Menu>
       {children}
