@@ -5,14 +5,14 @@ import ListLayout from '../components/layouts/ListLayout';
 import { RelatedItems } from '../components/ListItemElements';
 
 export default function Episodes({ episodes }) {
-  const [selectedEpisode, setSelectedEpisode] = useState(null);
+  const [selected, setSelected] = useState(null);
 
   return (
     <ListLayout activePage="episodes">
       {episodes.map(episode => (
         <Segment.Group key={episode.id} id={episode.id}>
           <Segment
-            onClick={() => { selectedEpisode === episode.id ? setSelectedEpisode(null) : setSelectedEpisode(episode.id) }}
+            onClick={() => { selected === episode.id ? setSelected(null) : setSelected(episode.id) }}
             className="cursor-pointer"
           >
             <div className="flex flex-row">
@@ -21,7 +21,7 @@ export default function Episodes({ episodes }) {
               <div className="w-48 text-right">{episode.releaseDate}</div>
             </div>
           </Segment>
-          <Segment className={`flex flex-col px-3 ${selectedEpisode === episode.id ? "" : "hidden"}`}>
+          <Segment className={`flex flex-col px-3 ${selected === episode.id ? "" : "hidden"}`}>
             <div className="pb-5 text-sm">{episode.description}</div>
             <RelatedItems
               guestList={episode.guests}
@@ -30,7 +30,6 @@ export default function Episodes({ episodes }) {
           </Segment>
         </Segment.Group>
       ))}
-
     </ListLayout>
   )
 }

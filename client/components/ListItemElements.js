@@ -40,7 +40,7 @@ export function RelatedItems({ episodeList = [], guestList = [], characterList =
   }, 0);
 
   return (
-    <Grid columns={numColumns} divided className="text-center">
+    <Grid columns={numColumns || 1} divided className="text-center">
       <Grid.Row>
         {episodeList.length ? episodeColumn : null}
         {guestList.length ? guestColumn : null}
