@@ -10,30 +10,35 @@ class ContentfulClient {
   }
 
   async getGuests() {
-    const guests = await this.client.getEntries({
-      content_type: "guest"
+    const entries = await this.client.getEntries({
+      content_type: "guest",
+      order: "fields.name"
     })
 
-    return guests.items.map(guest => ({
-      id: guest.sys.id,
-      name: guest.fields.name
-    }));
+    const guests = [];
+    for (let entry of entries.items) {
+      guests.push(await this.getGuest(entry.sys.id))
+    }
+    return guests;
   }
 
   async getCharacters() {
-    const characters = await this.client.getEntries({
-      content_type: "character"
+    const entries = await this.client.getEntries({
+      content_type: "character",
+      order: "fields.name"
     })
 
-    return characters.items.map(character => ({
-      id: character.sys.id,
-      name: character.fields.name
-    }));
+    const characters = [];
+    for (let entry of entries.items) {
+      characters.push(await this.getCharacter(entry.sys.id))
+    }
+    return characters;
   }
 
   async getEpisodes() {
     const episodes = await this.client.getEntries({
-      content_type: "episode"
+      content_type: "episode",
+      order: "-fields.releaseDate"
     })
 
     return episodes.items.map((episode) => (

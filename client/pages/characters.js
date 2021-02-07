@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { cc } from "../../services/contentful";
+import { cc } from "../services/contentful";
 import { Segment } from 'semantic-ui-react';
-import ListLayout from '../../components/ListLayout';
-import { RelatedItems } from '../../components/ListItemElements';
+import ListLayout from '../components/ListLayout';
+import { RelatedItems } from '../components/ListItemElements';
 
 export default function Characters({ characters }) {
   const [selected, setSelected] = useState(null);
@@ -22,8 +22,8 @@ export default function Characters({ characters }) {
           <Segment className={`flex flex-col px-3 ${selected === character.id ? "" : "hidden"}`}>
             <div className="pb-5 text-sm">{character.description}</div>
             <RelatedItems
+              episodeList={character.episodes}
               guestList={character.guests}
-              characterList={character.characters}
             />
           </Segment>
         </Segment.Group>
