@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router'
-import { Menu } from 'semantic-ui-react';
+import { Divider, Menu } from 'semantic-ui-react';
 
 export default function ListLayout({ activePage, children }) {
   const router = useRouter();
@@ -31,6 +31,7 @@ export default function ListLayout({ activePage, children }) {
           Characters
         </Menu.Item>
       </Menu>
+      <Divider />
       {children}
     </div>
   );

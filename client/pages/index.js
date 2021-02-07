@@ -1,8 +1,8 @@
-import Link from 'next/link';
 import { useState } from 'react';
 import { cc } from "../services/contentful";
-import { Segment, Grid, List } from 'semantic-ui-react';
+import { Segment } from 'semantic-ui-react';
 import ListLayout from '../components/layouts/ListLayout';
+import { RelatedItems } from '../components/ListItemElements';
 
 export default function Episodes({ episodes }) {
   const [selectedEpisode, setSelectedEpisode] = useState(null);
@@ -11,7 +11,10 @@ export default function Episodes({ episodes }) {
     <ListLayout activePage="episodes">
       {episodes.map(episode => (
         <Segment.Group key={episode.id} id={episode.id}>
-          <Segment className="cursor-pointer" onClick={() => selectedEpisode === episode.id ? setSelectedEpisode(null) : setSelectedEpisode(episode.id)}>
+          <Segment
+            onClick={() => { selectedEpisode === episode.id ? setSelectedEpisode(null) : setSelectedEpisode(episode.id) }}
+            className="cursor-pointer"
+          >
             <div className="flex flex-row">
               <div className="text-left">{episode.number}</div>
               <div className="w-full font-bold px-4">{episode.title}</div>
@@ -20,30 +23,10 @@ export default function Episodes({ episodes }) {
           </Segment>
           <Segment className={`flex flex-col px-3 ${selectedEpisode === episode.id ? "" : "hidden"}`}>
             <div className="pb-5 text-sm">{episode.description}</div>
-            <Grid columns={2} divided className="text-center">
-              <Grid.Row>
-                <Grid.Column>
-                  <List>
-                    <List.Item className="font-bold">Guests</List.Item>
-                    {episode.guests.map(guest => (
-                      <Link key={guest.id} href={`/guests/${guest.id}`}>
-                        <List.Item as='a'>{guest.name}</List.Item>
-                      </Link>
-                    ))}
-                  </List>
-                </Grid.Column>
-                <Grid.Column>
-                  <List>
-                    <List.Item className="font-bold">Characters</List.Item>
-                    {episode.characters.map(character => (
-                      <Link key={character.id} href={`/guests/${character.id}`}>
-                        <List.Item as='a'>{character.name}</List.Item>
-                      </Link>
-                    ))}
-                  </List>
-                </Grid.Column>
-              </Grid.Row>
-            </Grid>
+            <RelatedItems
+              guestList={episode.guests}
+              characterList={episode.characters}
+            />
           </Segment>
         </Segment.Group>
       ))}
