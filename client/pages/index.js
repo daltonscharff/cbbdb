@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { cc } from "../services/contentful";
-import { Segment, Grid, List } from 'semantic-ui-react';
+import { Segment, Grid, List, Menu } from 'semantic-ui-react';
 
 export default function Episodes({ episodes, ...props }) {
   const [selectedEpisode, setSelectedEpisode] = useState(null);
@@ -9,7 +9,36 @@ export default function Episodes({ episodes, ...props }) {
   return (
     <>
       <div className="mx-auto px-2 py-2 max-w-4xl">
-        <h1 className="text-center">Episodes</h1>
+        <Menu borderless fluid widths={3}>
+          <Menu.Item
+            name="episodes"
+            active={true}
+            link
+          >
+            <Link href="/">
+              Episodes
+            </Link>
+          </Menu.Item>
+          <Menu.Item
+            name="characters"
+            active={false}
+            link
+          >
+            <Link href="/characters">
+              Characters
+            </Link>
+          </Menu.Item>
+          <Menu.Item
+            name="guests"
+            active={false}
+            link
+          >
+            <Link href="/guests">
+              Guests
+            </Link>
+          </Menu.Item>
+        </Menu>
+
         {episodes.map(episode => (
           <Segment.Group>
             <Segment key={episode.id} id={episode.id} className="cursor-pointer" onClick={() => selectedEpisode === episode.id ? setSelectedEpisode(null) : setSelectedEpisode(episode.id)}>
@@ -21,7 +50,7 @@ export default function Episodes({ episodes, ...props }) {
             </Segment>
             <Segment className={`flex flex-col px-3 ${selectedEpisode === episode.id ? "" : "hidden"}`}>
               <div className="pb-5 text-sm">{episode.description}</div>
-              <Grid columns={2} divided>
+              <Grid columns={2} divided className="text-center">
                 <Grid.Row>
                   <Grid.Column>
                     <List>
