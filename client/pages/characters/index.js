@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { cc } from "../../services/contentful";
 import { Segment } from 'semantic-ui-react';
-import ListLayout from '../../components/layouts/ListLayout';
+import ListLayout from '../../components/ListLayout';
 import { RelatedItems } from '../../components/ListItemElements';
 
 export default function Characters({ characters }) {
