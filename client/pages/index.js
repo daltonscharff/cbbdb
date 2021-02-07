@@ -40,8 +40,8 @@ export default function Episodes({ episodes, ...props }) {
         </Menu>
 
         {episodes.map(episode => (
-          <Segment.Group>
-            <Segment key={episode.id} id={episode.id} className="cursor-pointer" onClick={() => selectedEpisode === episode.id ? setSelectedEpisode(null) : setSelectedEpisode(episode.id)}>
+          <Segment.Group key={episode.id} id={episode.id}>
+            <Segment className="cursor-pointer" onClick={() => selectedEpisode === episode.id ? setSelectedEpisode(null) : setSelectedEpisode(episode.id)}>
               <div className="flex flex-row">
                 <div className="text-left">{episode.number}</div>
                 <div className="w-full font-bold px-4">{episode.title}</div>
