@@ -1,0 +1,740 @@
+releaseDate,number,guests,bestOf,live
+2021-02-08,692,"['Sarah Chalke', 'Paul F. Tompkins', 'Katie Rich']",False,False
+2021-02-01,691,"['Tim Baltz', 'Shaun Diston', 'Lily Sullivan']",False,False
+2021-01-25,690,"['Mary Lynn Rajskub', 'Ego Nwodim', 'Carl Tart', 'Ben Rodgers']",False,False
+2021-01-18,689,"['Jake Fogelnest', 'Dan Lippert', 'Lyric Lewis']",False,False
+2021-01-11,688,"['Edi Patterson', 'Paul F. Tompkins']",False,False
+2021-01-04,687,"['Ben Schwartz', 'Horatio Sanz']",False,False
+2020-12-31,2020.4,[],True,False
+2020-12-28,2020.3,[],True,False
+2020-12-24,2020.2,[],True,False
+2020-12-21,2020.1,[],True,False
+2020-12-14,686,"['Jason Mantzoukas', 'Paul F. Tompkins', 'Andy Daly', 'Jon Gabrus', 'Lauren Lapkus', 'Ego Nwodim', 'Carl Tart', 'Lily Sullivan', 'Tim Baltz', 'Shaun Diston', 'Dan Lippert']",False,False
+2020-12-07,685,"['Paul Rust', 'Neil Campbell']",False,False
+2020-11-30,684,"['Natalie Palamides', 'Drew Tarver', 'Ryan Rosenberg', 'Dan Lippert', 'Jon Mackey']",False,False
+2020-11-23,683,"['Kulap Vilaysack', 'SuChin Pak', 'Ego Nwodim', 'Madeline Walter']",False,False
+2020-11-16,682,"['Colin Quinn', 'Jessica McKenna', 'Will Hines']",False,False
+2020-11-09,681,"['Aunty Donna (Broden Kelly', 'Zachary Ruan', 'Mark Bonanno)']",False,False
+2020-11-02,680,"['Jason Mantzoukas', 'Thomas Middleditch']",False,False
+2020-10-26,679,"['Gillian Jacobs', 'Paul F. Tompkins', 'Carl Tart']",False,False
+2020-10-19,678,"['Steve Byrne', 'Jimmy O. Yang', 'Drew Tarver', 'Katie Rich']",False,False
+2020-10-12,677,"['Taran Killam', 'Paul Brittain', 'Ryan Gaul']",False,False
+2020-10-05,676,"['Nick Thune', 'Jon Gabrus', 'Lily Sullivan', 'Ben Rodgers']",False,False
+2020-09-28,675,"['Arden Myrin', 'Lauren Lapkus', 'Brian Jordan Alvarez']",False,False
+2020-09-21,674,"['Shaun Diston', 'Tim Baltz', 'Edgar Momplaisir']",False,False
+2020-09-14,673,"['Eliza Skinner', 'Joe Wengert', 'Matt Apodaca']",False,False
+2020-09-07,672,"['Busy Philipps', 'Ego Nwodim', 'Paul F. Tompkins', 'Dan Lippert']",False,False
+2020-08-31,671,"['Patton Oswalt', ""Mike O'Brien"", 'Mary Sohn']",False,False
+2020-08-24,670,"['Kyle Bornheimer', 'Carl Tart', 'Lily Sullivan']",False,False
+2020-08-17,669,"['Jack Quaid', 'Eugene Cordero', 'Tawny Newsome']",False,False
+2020-08-10,668,"['June Diane Raphael', 'Paul F. Tompkins', 'Jacquis Neal']",False,False
+2020-08-06,,[],False,False
+2020-08-03,667,"['Andy Samberg', 'Mike Hanford', 'Tim Kalpakis', 'Jefferson Dutton', 'Will Hines']",False,False
+2020-07-27,666,"['Yassir Lester', 'Edi Patterson', 'Ryan Gaul', 'Nick Wiger']",False,False
+2020-07-20,665,"['Jim Gaffigan', 'Lily Sullivan', 'Ego Nwodim']",False,False
+2020-07-13,664,"['Langston Kerman', 'Heidi Gardner', 'Zac Oyama']",False,False
+2020-07-06,663,"['John Hodgman', 'David Rees', 'Paul F. Tompkins', 'Matt Gourley']",False,False
+2020-06-29,662,"['Rory Scovel', 'Sasheer Zamata', 'Mary Holland']",False,False
+2020-06-22,661,"['Paul F. Tompkins', 'Carl Tart', 'Tim Baltz']",False,False
+2020-06-15,660,"['Judy Greer', 'Shaun Diston', 'Will Hines']",False,False
+2020-06-08,659,"['Judd Apatow', 'Edi Patterson', 'Ego Nwodim', 'Ben Rodgers']",False,False
+2020-06-01,658,"['Myq Kaplan', 'Mike Hanford', 'Jessica McKenna']",False,False
+2020-05-25,657,"['Ben Schwartz', 'Tawny Newsome', 'Dan Lippert']",False,False
+2020-05-21,656,"['Andy Daly', 'Maria Bamford', 'Matt Gourley']",False,False
+2020-05-18,655,"['David Spade', 'Lauren Lapkus', 'Seth Morris']",False,False
+2020-05-11,654,"['Rhys Darby', 'Paul F. Tompkins', 'Matt Apodaca']",False,False
+2020-05-04,653,"['Jason Mantzoukas', 'Paul F. Tompkins', 'Jon Gabrus', 'Lily Sullivan', 'Carl Tart', 'Ego Nwodim']",False,False
+2020-04-27,652,"['Jonathan Van Ness', 'Edi Patterson', 'Tawny Newsome', 'Tim Baltz']",False,False
+2020-04-20,651,"['Ben Schwartz', 'Thomas Middleditch']",False,False
+2020-04-13,650,"['Jason Mantzoukas', 'Andy Daly']",False,False
+2020-04-09,649,"['Jon Gabrus', 'Ego Nwodim', 'Carl Tart', 'Drew Tarver']",False,False
+2020-04-06,648,"['Alan Yang', 'Lauren Lapkus', 'Mike Castle']",False,False
+2020-03-30,647,"['Paul F. Tompkins', 'Nicole Parker', 'Ryan Gaul']",False,False
+2020-03-23,646,"['Shaun Diston', 'Lily Sullivan', 'Jacob Wysocki']",False,False
+2020-03-16,645,"['Matt Braunger', 'Will Hines', 'Brad Evans', 'Nick Ciarelli']",False,False
+2020-03-09,644,"['Jon Gabrus', 'D’Arcy Carden', 'Brandon Scott Jones', 'Dan Lippert']",False,False
+2020-03-02,643,"['Neil Campbell', 'Paul F. Tompkins']",False,False
+2020-02-24,642,"['Jimmy Pardo', 'Niccole Thurman', 'Matt Apodaca']",False,False
+2020-02-17,641,"['Adam Cayton-Holland', 'Jessica McKenna', 'Zach Reino']",False,False
+2020-02-13,640,['Ben Schwartz'],False,False
+2020-02-10,639,"['Andy Samberg', 'Nick Kroll', 'Lily Sullivan']",False,False
+2020-02-03,638,"['Jason Mantzoukas', 'Shaun Diston', 'Tim Baltz']",False,False
+2020-01-27,637,"['Moshe Kasher', 'Paul F. Tompkins', 'Tawny Newsome']",False,False
+2020-01-20,636,"['Kristian Bruun', 'Ben Rodgers', 'Lisa Gilroy']",False,False
+2020-01-16,635,"['Rob Huebel', 'Erinn Hayes', 'Jonathan Braylock', 'Jerah Milligan', 'James III']",False,False
+2020-01-13,634,"['David Wain', 'Ego Nwodim', 'Carl Tart']",False,False
+2020-01-06,633,"['Ben Schwartz', 'Horatio Sanz']",False,False
+2020-01-02,2019.4,[],True,False
+2019-12-30,2019.3,[],True,False
+2019-12-26,2019.2,[],True,False
+2019-12-23,2019.1,[],True,False
+2019-12-16,632,"['Electric Guest', 'Jason Mantzoukas', 'Jon Gabrus', 'Lauren Lapkus', 'Shaun Diston', 'Tim Baltz', 'Lily Sullivan', 'Will Hines', 'Zeke Nicholson', 'Paul F. Tompkins', 'Zach Reino', 'Carl Tart', 'Drew Tarver']",False,False
+2019-12-09,631,"['Rekha Shankar', 'Mary Holland', 'Jimmy Fowlie']",False,False
+2019-12-02,630,"['Thomas Middleditch', 'Jon Gabrus']",False,False
+2019-11-25,629,"['Demi Adejuyigbe', 'Gabe Gundacker', 'Ryan Rosenberg', 'Ify Nwadiwe']",False,False
+2019-11-18,628,"['Joel Kim Booster', 'Mitra Jouhari', 'Dan Lippert', 'Zac Oyama']",False,False
+2019-11-11,627,"['Allen Strickland Williams', 'Holly Prazoff', 'Jiavani Linayao']",False,False
+2019-11-04,626,"['Max Silvestri', 'Edgar Momplaisir', 'Zeke Nicholson']",False,False
+2019-10-28,625,"['Jon Gabrus', ""Claudia O'Doherty"", 'Will Hines', 'Ben Rodgers']",False,False
+2019-10-21,624,"['Jocelyn DeBoer', 'Dawn Luebbe', 'Griffin Newman', 'Laci Mosley']",False,False
+2019-10-14,623,"['Sarah Baker', 'Matt Gourley', 'Paul F. Tompkins']",False,False
+2019-10-07,622,"['Jason Mantzoukas', 'Shaun Diston', 'Lily Sullivan', 'Tim Baltz']",False,False
+2019-09-30,621,"['Stephanie Wittels Wachs', 'Dan Lippert', 'Drew Tarver', 'Ryan Rosenberg']",False,False
+2019-09-23,620,"[""D'Arcy Carden"", 'Anthony King', 'John Gemberling']",False,False
+2019-09-16,619,"['Zach Galifianakis', 'Lauren Lapkus', 'Ryan Gaul', 'Jiavani Linayao']",False,False
+2019-09-09,618,"['Kevin Nealon', 'Joe Wengert', 'Lily Sullivan']",False,False
+2019-09-02,617,"['Anthony Jeselnik', 'Dan Lippert', 'Dhruv Uday Singh']",False,False
+2019-08-26,616,"['YACHT', 'Shaun Diston', 'Drew Tarver', 'Carl Tart']",False,False
+2019-08-19,615,"['Tatiana Maslany', 'Kristian Bruun', 'Paul F. Tompkins', 'Kirby Howell-Baptiste']",False,False
+2019-08-12,614,"['Adam DeVine', 'Tim Baltz', 'Edi Patterson']",False,False
+2019-08-05,613,"['Moshe Kasher', 'Natasha Leggero', 'Drew Tarver', 'Ele Woods']",False,False
+2019-07-29,612,"['Jimmy Pardo', 'Carl Tart', 'Lauren Ashley Smith']",False,False
+2019-07-22,611,"['Bryan Safi', 'Jon Gabrus', 'Zac Oyama', 'Edgar Momplaisir']",False,False
+2019-07-15,610,"['Alan Tudyk', 'Holly Prazoff', 'Ryan Rosenberg']",False,False
+2019-07-08,609,"['Andy Richter', 'Lily Sullivan', 'Oscar Montoya']",False,False
+2019-07-01,608,"['Tim Heidecker', 'Will Hines', 'Ben Rodgers']",False,False
+2019-06-24,607,"['Beth Stelling', 'Ego Nwodim', 'Betsy Sodaro']",False,False
+2019-06-17,606,"['Silversun Pickups', 'Paul F. Tompkins', 'Jessica McKenna']",False,False
+2019-06-10,605,"['Max Silvestri', 'Shaun Diston', 'Dan Lippert']",False,False
+2019-06-03,604,"['Seth Green', 'Carl Tart', 'Jon Daly', 'Gil Ozeri']",False,False
+2019-05-27,603,"['Mike Hanford', 'Tim Kalpakis', 'Jefferson Dutton', 'Neil Campbell']",False,False
+2019-05-20,602,"['David Cross', 'Will Hines', 'Ele Woods']",False,False
+2019-05-13,601,"['Kulap Vilaysack', 'Lily Sullivan', 'Ryan Gaul']",False,False
+2019-05-06,600,"['Jason Mantzoukas', 'Andy Daly']",False,False
+2019-04-29,599,['10th Anniversary'],False,False
+2019-04-22,598,"['Tim Robinson', 'Ryan Rosenberg', 'Natalie Palamides', 'Courtney Pauroso']",False,False
+2019-04-15,597,"['Baron Vaughn', 'Zac Oyama', 'Ify Nwadiwe']",False,False
+2019-04-08,596,"['Griffin Newman', 'Paul F. Tompkins', 'Alison Rich']",False,False
+2019-04-01,595,"['Demi Adejuyigbe', 'Carl Tart', 'Alyssa Limperis']",False,False
+2019-03-28,594,"['Dan Mangan', 'Will Hines', 'Jon Mackey']",False,False
+2019-03-25,593,"['Natalie Morales', 'Jessica McKenna', 'Zeke Nicholson']",False,False
+2019-03-18,592,"['Langston Kerman', 'Ego Nwodim', 'Carl Tart']",False,False
+2019-03-14,591,"['Flula Borg', 'Shaun Diston', 'Lily Sullivan', 'Tim Baltz']",False,False
+2019-03-11,590,"['Andrea Savage', 'Matt Besser', 'Madeline Walter']",False,False
+2019-03-04,589,"['Patton Oswalt', 'Andy Daly']",False,False
+2019-02-25,588,"['Jason Mantzoukas', 'Thomas Middleditch']",False,False
+2019-02-18,587,"['Maya Erskine', 'Anna Konkle', 'Dan Lippert', 'Ronnie Adrian']",False,False
+2019-02-11,586,"['Rhea Butcher', 'Colton Dunn', 'Ryan Gaul']",False,False
+2019-02-04,585,"['Matt Walsh', 'Lauren Lapkus', 'Dhruv Uday Singh']",False,False
+2019-01-28,584,"['John Hodgman', 'Paul F. Tompkins', 'Will Hines']",False,False
+2019-01-21,583,"['Chelsea Peretti', 'Drew Tarver', 'John Gemberling']",False,False
+2019-01-17,582,"['Sam Richardson', 'Joe Wengert', 'Mary Sohn']",False,False
+2019-01-14,581,"['Matt Ingebretson', 'Jake Weisman', 'Ego Nwodim', 'Mary Scheer']",False,False
+2019-01-07,580,"['Ben Schwartz', 'Horatio Sanz']",False,False
+2019-01-03,2018.4,[],True,False
+2018-12-31,2018.3,[],True,False
+2018-12-27,2018.2,[],True,False
+2018-12-24,2018.1,[],True,False
+2018-12-17,579,"['Jason Mantzoukas', 'Jon Gabrus', 'Paul F. Tompkins', 'Lauren Lapkus', 'Shaun Diston', 'Zeke Nicholson', 'Jessica McKenna', 'Mike Hanford', 'Will Hines', 'Tim Baltz', 'Ryan Gaul', 'Thomas Middleditch', 'Nick Wiger']",False,False
+2018-12-13,578,"['Paul F. Tompkins', 'Bobby Moynihan']",False,False
+2018-12-10,577,"['Flula Borg', 'Shaun Diston', 'Lily Sullivan']",False,False
+2018-12-03,576,"['Andy Daly', 'Tim Baltz']",False,False
+2018-11-26,575,"[""Don't Stop Or We'll Die"", 'Mike Hanford', 'Zac Oyama']",False,False
+2018-11-19,574,"['Conan O’Brien', 'Paul F. Tompkins', 'Lauren Lapkus', 'Mary Holland']",False,False
+2018-11-12,573,"['Adam Cayton-Holland', 'Alana Johnston', 'Ben Rodgers']",False,False
+2018-11-05,572,"['Jason Mantzoukas', 'Paul F. Tompkins']",False,False
+2018-10-29,571,"['Jon Gabrus', 'Betsy Sodaro', 'Will Hines']",False,False
+2018-10-22,570,"['David Wain', 'Thomas Middleditch', 'Shaun Diston']",False,False
+2018-10-15,569,"['Emily Heller', 'Drew Tarver', 'Dan Lippert', 'Ryan Rosenberg', 'Jon Mackey']",False,False
+2018-10-08,568,"['Ike Barinholtz', 'Dhruv Uday Singh', 'Mary Sohn']",False,False
+2018-10-01,567,"['Lennon Parham', 'Nick Kroll', 'Gil Ozeri']",False,False
+2018-09-24,566,"['Taran Killam', 'Paul Brittain', 'Ryan Gaul']",False,False
+2018-09-17,565,"['Jason Mantzoukas', 'Mary Holland', ""D'Arcy Carden""]",False,False
+2018-09-10,564,"['Zach Galifianakis', 'Andy Daly', 'Nicole Parker']",False,False
+2018-09-03,563,"['CHVRCHES', 'Edi Patterson', 'Holly Prazoff']",False,False
+2018-08-27,562,"['Max Silvestri', 'Matt Besser', 'Joe Wengert']",False,False
+2018-08-20,561,"['Andy Richter', 'Zach Reino', 'Tawny Newsome']",False,False
+2018-08-13,560,"['Ben Schwartz', 'Jessica McKenna', 'Will Hines']",False,False
+2018-08-06,559,"['Bobby Moynihan', 'Eugene Cordero']",False,False
+2018-07-30,558,"['Casey Wilson', 'Drew Tarver', 'Zac Oyama']",False,False
+2018-07-26,557,"['Carl Tart', 'Madeline Walter']",False,False
+2018-07-24,556,"['Kristian Bruun', 'John Gemberling', 'Gil Ozeri', 'Zeke Nicholson']",False,False
+2018-07-16,555,"['Cameron Esposito', 'Paul F. Tompkins', 'Matt Gourley']",False,False
+2018-07-09,554,"['Horatio Sanz', 'Thomas Middleditch']",False,False
+2018-07-02,553,"['Lakeith Stanfield', 'Ego Nwodim', 'Mary Sohn']",False,False
+2018-06-25,552,"['Weird Al Yankovic', 'Ryan Gaul', 'Edi Patterson']",False,False
+2018-06-18,551,"['The Sloppy Boys', 'Jon Gabrus', 'Shaun Diston']",False,False
+2018-06-11,550,"['Jason Mantzoukas', 'Andy Daly']",False,False
+2018-06-04,549,"['Jessica St. Clair', 'Lennon Parham', 'Brian Huskey', 'Paul Scheer']",False,False
+2018-05-28,548,"['Gillian Jacobs', 'Paul F. Tompkins', 'Lamar Woods', 'Tawny Newsome']",False,False
+2018-05-21,547,"['John Mulaney', 'Seth Morris', 'Betsy Sodaro']",False,False
+2018-05-17,546,"['Sean Clements', 'Hayes Davenport']",False,False
+2018-05-14,545,"['Reggie Watts', 'John Tejada', 'Jeremy Rowley', 'Alison Rich']",False,False
+2018-05-08,544,"['Michael Ian Black', 'Nick Thune', 'Zac Oyama', 'Holly Prazoff']",False,False
+2018-05-01,543,"['9th Anniversary: Sean Clements', 'Hayes Davenport', 'Lauren Lapkus', 'Paul F. Tompkins', 'Shaun Diston', 'Zeke Nicholson', 'Ego Nwodim', 'Madeline Walter']",False,False
+2018-04-24,542,"['Phoebe Robinson', 'Madeline Walter', 'Ronnie Adrian']",False,False
+2018-04-16,541,"['Thomas Middleditch', 'Ben Schwartz']",False,False
+2018-04-09,540,"['Jon Hamm', 'Paul F. Tompkins', 'Jessica McKenna', 'Zach Reino']",False,False
+2018-04-02,539,"['Adam Cayton-Holland', 'Neil Campbell', ""D'Arcy Carden""]",False,False
+2018-03-31,538,['5 Threedom: Ep 1 - This Was a Mistake'],False,False
+2018-03-26,538,"['Chelsea Peretti', 'Matt Besser', 'Dhruv Uday Singh']",False,False
+2018-03-19,537,"['Thomas Middleditch', 'Martin Starr']",False,False
+2018-03-15,536,"['Live from SXSW 2018: Tatiana Maslany', 'Jon Gabrus', 'Lauren Lapkus', 'Paul Scheer', 'James Adomian']",False,False
+2018-03-12,535,"['Peter Serafinowicz', 'Griffin Newman', 'Shaun Diston', 'Natalie Palamides', 'Courtney Pauroso']",False,False
+2018-03-05,534,"['Paul Rust', ""Claudia O'Doherty"", 'Carl Tart', 'Ego Nwodim']",False,False
+2018-02-26,533,"[""'Weird Al' Yankovic"", 'Mary Holland', 'Mano Agapion']",False,False
+2018-02-22,,[],False,False
+2018-02-20,532,"['Stephanie Wittels Wach', 'Will Hines', 'Paul F. Tompkins', 'Tawny Newsome']",False,False
+2018-02-12,531,"['Todd Glass', 'James Adomian', 'Nicole Byer']",False,False
+2018-02-05,530,"['Whitney Cummings', 'Jessica McKenna', 'Marques Ray']",False,False
+2018-01-30,529,"['Patton Oswalt', 'Andy Daly', 'Mary Sohn']",False,False
+2018-01-23,528,"['Natasha Leggero', 'Riki Lindhome', 'Zeke Nicholson', 'Drew Tarver']",False,False
+2018-01-16,527,"['Ego Nwodim', 'Shaun Diston', 'Alison Rich']",False,False
+2018-01-09,526,"['Ben Schwartz', 'Horatio Sanz']",False,False
+2018-01-05,2017.4,[],True,False
+2018-01-02,2017.3,[],True,False
+2017-12-29,2017.2,[],True,False
+2017-12-26,2017.1,[],True,False
+2017-12-19,525,"['Xmas: Mister Heavenly', 'Lauren Lapkus', 'Jon Gabrus', 'Jason Mantzoukas', 'Mike Hanford', 'Paul F. Tompkins', 'Carl Tart', 'James Adomian', 'Tawny Newsome', 'Drew Tarver', 'Jeremy Rowley', 'Neil Campbell']",False,False
+2017-12-12,524,"['Neil Patrick Harris', 'Paul F. Tompkins', 'Shaun Diston']",False,False
+2017-12-05,523,"['Jimmy Pardo', 'Drew Tarver', 'Ryan Rosenberg', 'Jon Mackey', 'Dan Lippert']",False,False
+2017-11-28,522,"['Sarah Silverman', 'Madeline Walter', 'Ego Nwodim', 'Paul F. Tompkins']",False,False
+2017-11-21,521,"['John Hodgman', 'Jon Gabrus', 'Lauren Lapkus', 'D’Arcy Carden']",False,False
+2017-11-17,520,"['Rob Huebel', 'Will Hines', 'Alana Johnston']",False,False
+2017-11-14,519,"['John Early', 'Carl Tart', 'Zeke Nicholson']",False,False
+2017-11-07,518,"['Jason Mantzoukas', 'Andy Daly']",False,False
+2017-10-31,517,"['The National', 'Brendon Small', 'Jessica McKenna']",False,False
+2017-10-27,516,['Ben Schwartz'],False,False
+2017-10-24,515,"['Halloween', 'Brett Gelman', 'Jon Daly', 'Allan McLeod', 'Natalie Palamides', 'Nick Wiger', 'Caroline Anderson']",False,False
+2017-10-17,514,"['Taran Killam', 'Paul Brittain', 'Ryan Gaul']",False,False
+2017-10-13,513,"['Patton Oswalt', 'Drew Tarver', 'Betsy Sodaro']",False,False
+2017-10-10,512,"['Bobby Moynihan', 'Paul F. Tompkins']",False,False
+2017-10-03,511,"['Nick Kroll', 'Jason Mantzoukas', 'Seth Morris']",False,False
+2017-09-26,510,"['Andy Samberg', 'Paul F. Tompkins', 'Drew Tarver']",False,False
+2017-09-19,509,"['Tig Notaro', 'Lauren Lapkus', 'Mary Holland', 'Erin Whitehead']",False,False
+2017-09-12,508,"['Nathan Fielder', 'Betsy Sodaro', 'Will Hines']",False,False
+2017-09-05,507,"['Cameron Esposito', 'Rhea Butcher', 'Paul F. Tompkins', 'Tawny Newsome']",False,False
+2017-08-29,506,"['Chris Gethard', 'Mike Hanford', 'Madeline Walter']",False,False
+2017-08-22,505,"['David Wain', 'Dan Wilson', 'Jordan Black', 'Tim Baltz']",False,False
+2017-08-18,504,['Brett Gelman'],False,False
+2017-08-15,503,"['Andy Richter', 'Alison Rich', 'John Gemberling']",False,False
+2017-08-08,502,"['Joe Mande', 'James Adomian', 'Will Hines']",False,False
+2017-08-01,501,"['Manchester Orchestra', 'Jessica McKenna', 'Zach Reino']",False,False
+2017-07-25,500,"['Nick Kroll', 'Jason Mantzoukas', 'Lauren Lapkus', 'Jon Gabrus', 'Paul F. Tompkins', 'Mary Holland']",False,False
+2017-07-17,499,"['Kyle Mooney', 'Paul Rust', 'Neil Campbell', 'Fran Gillespie']",False,False
+2017-07-13,498,"['Flula Borg', 'Jeremy Rowley', 'Brendon Small']",False,False
+2017-07-10,497,"['Kumail Nanjiani', 'Emily V. Gordon', 'Horatio Sanz', 'Eliza Skinner']",False,False
+2017-07-03,496,"['Andrea Savage', 'Jon Gabrus', 'Will Hines', 'Holly Prazoff']",False,False
+2017-06-29,495,"['Jason Mantzoukas', 'Mary Holland', 'Tim Baltz']",False,False
+2017-06-26,494,"['Jon Hamm', 'Edgar Wright', 'Paul F. Tompkins', 'Jessica McKenna']",False,False
+2017-06-22,493,"['Nick Kroll', 'Anthony King', 'Seth Morris']",False,False
+2017-06-19,492,"['Jessica St. Clair', 'Lennon Parham']",False,False
+2017-06-12,491,"['Rory Scovel', 'Mike Hanford', ""D'Arcy Carden""]",False,False
+2017-06-05,490,"['Lucia Aniello', 'Paul W. Downs', 'Zeke Nicholson', 'Carl Tart', 'Lamar Woods']",False,False
+2017-05-29,489,"['Kulap Vilaysack', 'Paul F. Tompkins', 'Tim Baltz', 'Dan Ahdoot', 'Mandell Maughan', 'Eugene Cordero', 'Tawny Newsome', 'Drew Tarver']",False,False
+2017-05-22,488,"['Al Madrigal', 'Alana Johnston', 'Alison Rich', 'Natalie Palamides']",False,False
+2017-05-15,487,"['Haley Joel Osment', 'Ryan Gaul', 'Lauren Lapkus', 'Shaun Diston']",False,False
+2017-05-08,486,"['Ron Funches', 'Nick Thune', 'Jon Daly', 'Jordan Black']",False,False
+2017-05-01,485,"['8th Anniversary: Jon Gabrus', 'Paul F. Tompkins', 'Lauren Lapkus', 'Zeke Nicholson', 'Carl Tart', 'Mary Holland', 'Mike Hanford', 'Jessica McKenna', 'Tawny Newsome', 'Tim Baltz', 'Ryan Gaul', 'Drew Tarver', 'Jeremy Rowley', 'Nick Kroll']",False,False
+2017-04-24,484,"['Jason Mantzoukas', 'Jon Gabrus', 'Paul F. Tompkins']",False,False
+2017-04-20,483,"['Neil Campbell', 'Zeke Nicholson', 'Matt Besser']",False,False
+2017-04-17,482,"['Joel Hodgson', 'Jonah Ray', 'Baron Vaughn', 'Alison Rich', 'Horatio Sanz']",False,False
+2017-04-10,481,"['Thomas Middleditch', 'Kumail Nanjiani', 'Martin Starr']",False,False
+2017-04-06,480,"['Jane Lynch', 'Kate Mines', 'Paul Witten', 'Drew Tarver', 'Madeline Walter']",False,False
+2017-04-03,479,"['Gerry Duggan', 'Paul Brittain', 'Kirby Howell-Baptiste']",False,False
+2017-03-27,478,"['Kristian Bruun', 'Tatiana Maslany', 'Paul F. Tompkins', 'Mary Holland', 'Lauren Lapkus']",False,False
+2017-03-23,477,"['American Football', 'Mike Hanford', 'Mary Holland', 'Tim Baltz']",False,False
+2017-03-20,476,"['Ryan Gaul', 'Heidi Gardner', 'Jordan Black']",False,False
+2017-03-13,475,"['Andy Daly', 'Jon Gabrus']",False,False
+2017-03-06,474,"['Gillian Jacobs', 'Paul Rust', 'Paul F. Tompkins']",False,False
+2017-02-27,473,"['Ben Schwartz', 'Thomas Middleditch']",False,False
+2017-02-23,472,"['Kurt Braunohler', 'Will Hines', 'Holly Prazoff']",False,False
+2017-02-20,471,"['Jason Mantzoukas', 'Kate Berlant', 'John Early']",False,False
+2017-02-13,470,"['Electric Guest', 'Mary Holland', 'Erin Whitehead']",False,False
+2017-02-06,469,"['John Hodgman', 'Zeke Nicholson', 'Carl Tart']",False,False
+2017-01-30,468,"['Rachel Bloom', 'Jeremy Rowley', 'Anthony Atamanuik', 'Mike Hanford']",False,False
+2017-01-23,467,"['Paul Scheer', 'Michelle Biloon', ""Mike O'Brien""]",False,False
+2017-01-16,466,"['Brendon Walsh', 'Randy Liedtke', 'Lauren Lapkus']",False,False
+2017-01-09,465,"['Matt Besser', 'Jessica McKenna', 'Gil Ozeri']",False,False
+2017-01-02,464,"['Ben Schwartz', 'Horatio Sanz']",False,False
+2016-12-29,2016.4,[],True,False
+2016-12-26,2016.3,[],True,False
+2016-12-22,2016.2,[],True,False
+2016-12-19,2016.1,[],True,False
+2016-12-12,463,"['Xmas: Jason Mantzoukas', 'Jon Gabrus', 'Mike Hanford', 'Paul F. Tompkins', 'Tawny Newsome', 'Tim Baltz', 'Neil Campbell', 'Rhea Butcher', 'Will Hines', 'Ryan Gaul', 'Jeremy Rowley', 'Drew Tarver', 'James Adomian', 'Zeke Nicholson', 'Brendon Small']",False,False
+2016-12-05,462,"['Nick Thune', 'Moshe Kasher', 'Lauren Lapkus']",False,False
+2016-12-01,461,"['Adal Rifai', 'Arnie Niekamp', 'Matt Young']",False,False
+2016-11-28,460,"['Weird Al Yankovic', 'Ryan Gaul', 'Jeremy Rowley', 'Drew Tarver']",False,False
+2016-11-21,459,"['Maria Thayer', 'James Adomian', 'Tawny Newsome']",False,False
+2016-11-17,458,['Ben Schwartz'],False,False
+2016-11-14,457,"['Michael Showalter', 'Paul Brittain', 'Jeremy Rowley']",False,False
+2016-11-07,456,"['Jason Mantzoukas', 'Paul F. Tompkins']",False,False
+2016-11-03,455,"['Bob Odenkirk', 'Tim Kalpakis', 'Dave Ferguson', 'Mike Hanford', 'Rhea Butcher', 'Eban Schletter']",False,False
+2016-10-31,454,"['Halloween', 'Jon Daly', 'Allan McLeod', 'Paul Rust', 'Nick Wiger', 'Caroline Anderson']",False,False
+2016-10-27,453,"['Johnny Pemberton', 'Eden Sher', 'Londale Theus Jr.']",False,False
+2016-10-24,452,"['Weird Al Yankovic', ""Claudia O'Doherty"", 'Jessica McKenna']",False,False
+2016-10-17,451,"['Ben Roy', 'Andrew Orvedahl', 'Lauren Lapkus', 'Brendon Small']",False,False
+2016-10-13,450,"['Kyle Kinane', 'Horatio Sanz']",False,False
+2016-10-10,449,"['Paul F. Tompkins', 'Drew Tarver', 'Ryan Gaul', 'Mandell Maughan', 'Dan Ahdoot']",False,False
+2016-10-03,448,"['Robert Kirkman', 'Ryan Gaul', 'John Gemberling']",False,False
+2016-09-26,447,"['Aya Cash', 'Kether Donohue', 'Zeke Nicholson', 'Kate Berlant']",False,False
+2016-09-19,446,"['Tatiana Maslany', 'Kristian Bruun', 'Mary Holland', 'Paul F. Tompkins']",False,False
+2016-09-15,445,"['Michelle Biloon', 'Paul F. Tompkins']",False,False
+2016-09-12,444,"['Tig Notaro', 'Mike Hanford', 'Drew Tarver']",False,False
+2016-09-05,443,"['Adam Scott', 'Will Hines', 'Jessica McKenna']",False,False
+2016-08-29,442,"['Andy Daly', 'Jeremy Rowley']",False,False
+2016-08-22,441,"['Jason Mantzoukas', 'Carl Tart', 'Neil Campbell']",False,False
+2016-08-15,440,"['Todd Glass', 'Jon Gabrus', 'Matt Besser']",False,False
+2016-08-11,439,"['Adam Pally', 'Nick Kroll']",False,False
+2016-08-08,438,"['Cameron Esposito', 'Rhea Butcher', 'Paul F. Tompkins']",False,False
+2016-08-01,437,"['Mike Birbiglia', 'Horatio Sanz', 'Mary Holland']",False,False
+2016-07-25,436,"['Sean Clements', 'Chris Tallman', 'Eliza Skinner']",False,False
+2016-07-18,435,"['Jim Gaffigan', 'Eugene Cordero', 'Will Hines']",False,False
+2016-07-14,434,"['Brent Weinbach', 'Brendon Small', 'Erin Whitehead']",False,False
+2016-07-11,433,"['Aparna Nancherla', 'Jeremy Rowley', 'Ryan Gaul']",False,False
+2016-07-04,432,"['Dana Carvey', 'John Gemberling', 'Drew Tarver']",False,False
+2016-06-30,431,"['Brett Gelman', ""Mike O'Brien"", 'Tawny Newsome']",False,False
+2016-06-27,430,"['Kristian Bruun', 'Jessica McKenna', 'Zeke Nicholson']",False,False
+2016-06-20,429,"['Jason Mantzoukas', 'Thomas Middleditch']",False,False
+2016-06-16,428,"['Rhys Darby', 'Mary Holland', 'Londale Theus Jr.']",False,False
+2016-06-13,427,"['Natasha Leggero', 'Riki Lindhome', 'Dan Mangan', 'Craig Cackowski']",False,False
+2016-06-06,426,"['Ben Schwartz', 'Horatio Sanz']",False,False
+2016-06-02,425,"['Andy Samberg', ""Claudia O'Doherty"", 'Nick Kroll']",False,False
+2016-05-30,424,"['Weird Al Yankovic', 'Kate Berlant', 'Drew Tarver']",False,False
+2016-05-23,423,"['Bobby Moynihan', 'Paul F. Tompkins']",False,False
+2016-05-19,422,"['Chris Gethard', 'Anthony Atamanuik', 'Connor Ratliff', ""Shannon O'Neill""]",False,False
+2016-05-16,421,"['Maria Bamford', 'Will Hines']",False,False
+2016-05-09,420,"['Rogue Wave', 'Haley Joel Osment', 'Lauren Lapkus']",False,False
+2016-05-02,419,"['7th Anniversary', 'Jason Mantzoukas', 'Paul F. Tompkins', 'Horatio Sanz', 'Neil Campbell', 'Mike Hanford', 'Tim Baltz', 'Drew Tarver']",False,False
+2016-04-28,418,"['Paul Reiser', 'Brendon Small']",False,False
+2016-04-25,417,"['Shane Torres', 'Tim Baltz', 'Ryan Gaul']",False,False
+2016-04-18,416,"['Thomas Middleditch', 'Martin Starr', 'Kumail Nanjiani']",False,False
+2016-04-14,415,"['Rob Corddry', 'Jon Gabrus', 'Brian Huskey', 'Erinn Hayes']",False,False
+2016-04-11,414,"['Sean Clements', 'Hayes Davenport']",False,False
+2016-04-07,413,"['Tom Scharpling', 'Jon Daly']",False,False
+2016-04-04,412,"['Cameron Esposito', 'Paul F. Tompkins', 'Matt Gourley']",False,False
+2016-03-31,411,"['The Thermals', 'Mike Hanford', 'Tim Kalpakis']",False,False
+2016-03-28,410,"['Jerrod Carmichael', 'Joe Wengert', 'Neil Campbell']",False,False
+2016-03-21,409,"['Taran Killam', 'Paul Brittain']",False,False
+2016-03-17,408,"['Live at SXSW 2016: Ben Schwartz', 'Jon Gabrus', 'Nick Kroll', 'Paul F. Tompkins']",False,False
+2016-03-14,407,"['Paul F. Tompkins', 'Dan Ahdoot', 'Drew Tarver', 'Mandell Maughan', 'Ryan Gaul', 'Tawny Newsome', 'Tim Baltz']",False,False
+2016-03-07,406,"['Thomas Middleditch', 'Lauren Lapkus']",False,False
+2016-03-03,405,"['Jillian Bell', 'Charlotte Newhouse', 'Matt Gourley', 'James Bladon']",False,False
+2016-02-29,404,"['Neil Campbell', 'Jessica Jean Jardine', 'Ronnie Adrian', 'Betsy Sodaro', 'Carl Tart', 'Tim Kalpakis']",False,False
+2016-02-22,403,"['Adam Scott', 'Tim Baltz', 'Dan Ahdoot']",False,False
+2016-02-18,402,['Ben Schwartz'],False,False
+2016-02-15,401,"['Paul Rust', 'Gillian Jacobs', 'Paul F. Tompkins']",False,False
+2016-02-08,400,"['Jason Mantzoukas', 'Andy Daly']",False,False
+2016-02-04,399,"['Gilbert Gottfried', 'James Adomian', 'Anthony Atamanuik']",False,False
+2016-02-01,398,"['Samantha Bee', 'Drew Tarver', 'Ryan Gaul']",False,False
+2016-01-25,397,"['Weird Al Yankovic', 'Lauren Lapkus', 'Joe Wengert']",False,False
+2016-01-21,396,"['Rob Huebel', 'Jon Gabrus', 'Jessica St. Clair']",False,False
+2016-01-18,395,"['Whitney Cummings', 'John Gemberling', 'Mary Holland']",False,False
+2016-01-11,394,"['Zach Galifianakis', 'Lauren Lapkus', 'Tim Baltz']",False,False
+2016-01-04,393,"['Ben Schwartz', 'Horatio Sanz']",False,False
+2015-12-31,2015.4,[],True,False
+2015-12-28,2015.3,[],True,False
+2015-12-24,2015.2,[],True,False
+2015-12-21,2015.1,[],True,False
+2015-12-17,392,"['Jessica St. Clair', 'Lennon Parham', 'Jason Mantzoukas', 'Brian Huskey', 'Seth Morris', 'Danielle Schneider', 'Jon Daly']",False,False
+2015-12-14,391,"['Xmas: Paul F. Tompkins', 'Lauren Lapkus', 'Jon Gabrus', 'Neil Campbell', 'Mike Hanford', 'Will Hines']",False,False
+2015-12-07,390,"['Eugene Mirman', 'John Mulaney', 'Nick Kroll']",False,False
+2015-11-30,389,"['Mary Elizabeth Ellis', 'Drew Tarver', 'Dan Lippert']",False,False
+2015-11-23,388,"['Neko Case', 'Mike Hanford', 'Mookie Blaiklock']",False,False
+2015-11-19,387,"['John Grant', 'John Gemberling', 'Jocelyn DeBoer']",False,False
+2015-11-16,386,"['Bob Odenkirk', 'David Cross', ""Mike O'Brien"", 'Paul F. Tompkins']",False,False
+2015-11-09,385,"['John Mulaney', 'Lauren Lapkus', 'Betsy Sodaro']",False,False
+2015-11-02,384,"['Jason Mantzoukas', 'Paul F. Tompkins']",False,False
+2015-10-26,383,"['Halloween', 'Brett Gelman', 'Jon Daly', 'Nick Wiger', 'Paul Rust', 'Caroline Anderson']",False,False
+2015-10-19,382,"['Fred Savage', 'Wayne Federman', 'Matt Gourley']",False,False
+2015-10-12,381,"['Nathan Fielder', 'Anthony Jeselnik', 'Drew Tarver']",False,False
+2015-10-08,380,"['Colin Hanks', 'Eagles of Death Metal', 'Matt Walsh', 'Brian Huskey']",False,False
+2015-10-05,379,"['Alia Shawkat', 'Angela Trimbur', 'Adam DeVine', 'Jon Gabrus', 'Pamela Murphy']",False,False
+2015-09-28,378,"['Jason Mantzoukas', 'Nick Kroll']",False,False
+2015-09-21,377,"['Tatiana Maslany', 'Kristian Bruun', 'Paul F. Tompkins', 'Lauren Lapkus']",False,False
+2015-09-17,376,"['Peaches', ""Claudia O'Doherty"", 'Will Hines']",False,False
+2015-09-14,375,"['Jessica St. Clair', 'Lennon Parham', 'Brian Huskey', 'Seth Morris', 'Lauren Lapkus', 'Jason Mantzoukas']",False,False
+2015-09-10,374,"['Neil Campbell', 'Paul Rust', 'Fran Gillespie']",False,False
+2015-09-07,373,"['Eric Stonestreet', 'Brendon Small']",False,False
+2015-08-31,372,"['Diane Coffee', 'Mike Hanford', 'Horatio Sanz']",False,False
+2015-08-24,371,"['Jemaine Clement', 'Lauren Lapkus', 'Mary Holland', 'Stephanie Allynne', 'Erin Whitehead']",False,False
+2015-08-17,370,"['Paul F. Tompkins', 'Matt Gourley']",False,False
+2015-08-13,369,"['Andrea Savage', 'Casey Wilson', 'Dannah Phirman', 'Danielle Schneider']",False,False
+2015-08-10,368,"['Paul Scheer', 'Rob Huebel']",False,False
+2015-08-06,367,"['Brett Gelman', 'Tim Heidecker', 'Jon Daly']",False,False
+2015-08-03,366,"['Bobcat Goldthwait', 'Joe Wengert', 'Will Hines']",False,False
+2015-07-27,365,"['Jason Mantzoukas', 'Andy Daly', 'Paul F. Tompkins']",False,False
+2015-07-23,364,"['Michael Ian Black', 'Lauren Lapkus']",False,False
+2015-07-20,363,"['David Wain', 'Rich Sommer', 'Molly Shannon', 'Marguerite Moreau']",False,False
+2015-07-13,362,"['Tig Notaro', 'Stephanie Allynne', 'Mookie Blaiklock']",False,False
+2015-07-09,361,"['Dan Finnerty', 'Jon Gabrus', 'John Gemberling']",False,False
+2015-07-06,360,"['Jimmy Pardo', 'Paul Brittain']",False,False
+2015-06-29,359,"['Kumail Nanjiani', 'Jonah Ray', 'Horatio Sanz', 'Erin Whitehead']",False,False
+2015-06-25,358,"['Beck Bennett', 'Mike Hanford', 'Neil Campbell']",False,False
+2015-06-22,357,"['Natasha Leggero', 'Jeremy Konner', 'Brendon Small', 'Betsy Sodaro']",False,False
+2015-06-15,356,"['Jason Mantzoukas', 'Paul F. Tompkins']",False,False
+2015-06-08,355,"['Lauren Lapkus', 'Thomas Middleditch']",False,False
+2015-06-04,354,['Ben Schwartz'],False,False
+2015-06-01,353,"['Reggie Watts', 'Neil Campbell', 'Mike Mitchell']",False,False
+2015-05-25,352,"['Nick Swardson', 'James Adomian', 'Will Hines']",False,False
+2015-05-18,351,"['Sean Clements', 'Hayes Davenport', 'Ben Rodgers', 'Hayley Huntley']",False,False
+2015-05-11,350,"['Andy Richter', 'Andy Daly']",False,False
+2015-05-04,349,"['6th Anniv. Paul F. Tompkins', 'Lauren Lapkus', 'Thomas Middleditch', 'Neil Campbell', 'Mike Hanford', 'Joe Wengert', 'Paul Scheer', 'Erin Whitehead']",False,False
+2015-04-27,348,"['Cameron Esposito', 'Paul F. Tompkins', 'Matt Gourley']",False,False
+2015-04-23,347,"['Kevin Pollak', 'Seth Morris']",False,False
+2015-04-20,346,"['Tom Green', 'Mary Holland', 'Erin Whitehead']",False,False
+2015-04-13,345,"['Kyle Bornheimer', 'Paul Brittain']",False,False
+2015-04-09,344,"['Ryan Hansen', 'Jamie Chung', 'Horatio Sanz', 'Jocelyn DeBoer', 'Paul F. Tompkins']",False,False
+2015-04-06,343,"['Alicia Witt', 'Jon Gabrus', 'Brendon Small']",False,False
+2015-03-30,342,"['Thomas Middleditch', 'Kumail Nanjiani', 'Martin Starr', 'Paul F. Tompkins']",False,False
+2015-03-23,341,"['Stars', ""Claudia O'Doherty"", 'Neil Campbell']",False,False
+2015-03-19,340,"['LIVE from SXSW 2015 II: Tig Notaro', 'Stephanie Allynne', 'Mary Holland', 'Lauren Lapkus', 'James Adomian']",False,False
+2015-03-16,339,"['LIVE from SXSW 2015: Lauren Lapkus', 'Colin Hanks', 'Nick Kroll', 'Horatio Sanz']",False,False
+2015-03-09,338,"['Michael Ableson', 'Paul F. Tompkins', 'Andy Daly', 'Lauren Lapkus']",False,False
+2015-03-02,337,"['Weird Al Yankovic', 'Paul F. Tompkins', 'Joe Wengert']",False,False
+2015-02-22,336,"['Harris Wittels', 'Chelsea Peretti', 'Adam Scott']",False,False
+2015-02-16,335,"['Colin Hay', 'Gillian Jacobs', 'Paul F. Tompkins']",False,False
+2015-02-12,334,"['David Cross', 'James Adomian', 'Matt Walsh']",False,False
+2015-02-09,333,"['Jack Antonoff', 'Horatio Sanz', 'Miriam Tolan']",False,False
+2015-02-02,332,"['Kyle Kinane', 'Matt Braunger', 'Fran Gillespie', 'Neil Campbell']",False,False
+2015-01-26,331,"['Patton Oswalt', 'Lauren Lapkus', 'Mary Holland']",False,False
+2015-01-19,330,"['Jim Rash', 'Horatio Sanz']",False,False
+2015-01-12,329,"['Nick Kroll', 'John Mulaney']",False,False
+2015-01-08,328,"['American Football', 'Anders Holm', 'Mike Hanford']",False,False
+2015-01-05,327,"['Ben Schwartz', 'Horatio Sanz']",False,False
+2014-12-31,2014.4,[],True,False
+2014-12-29,2014.3,[],True,False
+2014-12-24,2014.2,[],True,False
+2014-12-22,2014.1,[],True,False
+2014-12-15,326,['2014 Holiday Spectacular'],False,False
+2014-12-08,325,"['Skylar Astin', 'Rory Scovel', 'Pamela Murphy', 'Will Hines']",False,False
+2014-12-01,324,"['Colin Hanks', 'Lauren Lapkus', 'Stephanie Allynne', 'Mary Holland', 'Erin Whitehead']",False,False
+2014-11-24,323,"['Tears for Fears', 'Reggie Watts', 'Paul F. Tompkins']",False,False
+2014-11-17,322,"['Chelsea Peretti', 'Seth Morris']",False,False
+2014-11-10,321,"['Ana Gasteyer', 'Jon Gabrus', 'Mookie Blaiklock']",False,False
+2014-11-03,320,"['Alex Borstein', 'Brendon Small', 'Molly Bretthauer']",False,False
+2014-10-30,319,"['Halloween', 'Brett Gelman', 'Jon Daly', 'Allan McLeod', 'Nick Wiger', 'Caroline Anderson']",False,False
+2014-10-27,318,"['Wyatt Cenac', 'Matt Besser', 'Jocelyn DeBoer']",False,False
+2014-10-20,317,"['Natasha Lyonne', 'Paul F. Tompkins', 'Mary Holland']",False,False
+2014-10-16,316,"['Dane Cook', 'Reggie Watts', 'Neil Campbell']",False,False
+2014-10-13,315,"['Ken Marino', 'Casey Wilson', 'Joe Wengert']",False,False
+2014-10-06,314,"['Cameron Esposito', 'Paul F. Tompkins']",False,False
+2014-09-29,313,"['Ben Schwartz', 'Horatio Sanz', 'Paul Banks']",False,False
+2014-09-22,312,"['Andy Samberg', 'Lauren Lapkus']",False,False
+2014-09-18,311,"['Joe Lo Truglio', 'Beth Dover']",False,False
+2014-09-15,310,"['Kevin Allison', 'Pamela Murphy', 'John Gemberling']",False,False
+2014-09-08,309,"['Nick Kroll', 'Jimmy Pardo', ""Claudia O'Doherty""]",False,False
+2014-09-01,308,"['Matt Gourley', 'Mark McConville', 'Jeremy Carter', 'Paul F. Tompkins: Superego']",False,False
+2014-08-25,307,"['Tenacious D', 'Lauren Lapkus', 'Joe Wengert']",False,False
+2014-08-21,306,"['Paul Rust', 'Harris Wittels', 'Michael Cassady', ""Don't Stop Or We'll Die""]",False,False
+2014-08-18,305,"['Howard Kremer', 'Kulap Vilaysack', 'Jon Gabrus']",False,False
+2014-08-11,304,"['Jessica St. Clair', 'Lennon Parham', 'Lauren Lapkus', 'Jason Mantzoukas', 'Brian Huskey', 'Melissa Rauch', 'Andy Daly']",False,False
+2014-08-04,303,"['Paul F. Tompkins', 'Loudon Wainwright III']",False,False
+2014-07-31,302,"['Mary Lynn Rajskub', 'Eddie Pepitone', 'Twin Shadow']",False,False
+2014-07-28,301,"['Jonah Ray', 'Kumail Nanjiani', 'Brendon Small']",False,False
+2014-07-21,300,"['Jason Mantzoukas', 'Andy Daly']",False,False
+2014-07-15,299,"['Weird Al Yankovic', ""Claudia O'Doherty""]",False,False
+2014-07-07,298,"['Paul Scheer', 'Dannah Phirman', 'Danielle Schneider', 'Tymberlee Hill', 'Andrea Savage']",False,False
+2014-06-30,297,"['Nathan Fielder', 'Joe Wengert', 'James Adomian']",False,False
+2014-06-23,296,"['David Wain', 'Michael Showalter', 'Neil Campbell']",False,False
+2014-06-19,295,"['Alex Anfanger', 'Dan Schimpf', 'Lauren Lapkus']",False,False
+2014-06-16,294,"['Ian Edwards', 'Brendon Small', 'Jessica St. Clair']",False,False
+2014-06-12,293,"['Phil Lord', 'Chris Miller', 'Jon Gabrus', 'Eugene Cordero']",False,False
+2014-06-09,292,"['Jenny Slate', 'Merrill Garbus', 'Jon Daly']",False,False
+2014-06-05,291,"['Bob Odenkirk', 'Adam Resnick', 'Neil Casey', 'Fran Gillespie']",False,False
+2014-06-02,290,"['Todd Glass', 'James Adomian']",False,False
+2014-05-26,289,"['Paul F. Tompkins', 'Matt Gourley']",False,False
+2014-05-22,288,"['The Sklar Brothers', 'Horatio Sanz']",False,False
+2014-05-19,287,"['Shane Torres', 'Lauren Lapkus']",False,False
+2014-05-12,286,"['Bobby Moynihan', 'Paul F. Tompkins']",False,False
+2014-05-08,285,['Ben Schwartz'],False,False
+2014-05-05,284,['The Thrilling Adventure Hour'],False,False
+2014-04-28,283,"['Jessica St. Clair', 'Lennon Parham', 'Jason Mantzoukas', 'Lauren Lapkus', 'Matt Besser', 'Paul F. Tompkins', 'Paul Rust', 'Neil Campbell']",False,False
+2014-04-21,282,"['Jessica St. Clair', 'Lennon Parham']",False,False
+2014-04-14,281,"['Matt Walsh', 'Tim Simons']",False,False
+2014-04-07,280,"['Weird Al Yankovic', 'Paul F. Tompkins']",False,False
+2014-03-31,279,"['Patton Oswalt', 'Lauren Lapkus', 'Will Hines']",False,False
+2014-03-24,278,"[""Old 97's"", 'Matt Berninger', 'James Adomian']",False,False
+2014-03-17,277,"['Chelsea Peretti', 'Paul Rust', 'Neil Campbell']",False,False
+2014-03-13,276,"['LIVE from SXSW 2014 II; Matt Braunger', 'Matt Besser', 'Jon Gabrus']",False,False
+2014-03-10,275,"['LIVE from SXSW 2014; Jonah Ray', 'Adam Cayton-Holland', 'James Adomian']",False,False
+2014-03-03,274,"['Jason Mantzoukas', 'Andy Daly']",False,False
+2014-02-24,273,"[""Jim O'Heir"", 'Horatio Sanz']",False,False
+2014-02-17,272,"['Gillian Jacobs', 'Paul F. Tompkins']",False,False
+2014-02-13,271,"['Nick Thune', 'Molly Bretthauer']",False,False
+2014-02-10,270,"['Jon Daly', 'James Adomian']",False,False
+2014-02-03,269,"['Doug Benson', 'Paul Hornschemeier', 'Matt Besser']",False,False
+2014-01-30,268,"['Jimmy Pardo', 'Betsy Sodaro']",False,False
+2014-01-27,267,"['Jerrod Carmichael', 'Neil Campbell', 'Mookie Blaiklock']",False,False
+2014-01-20,266,"['Taran Killam', 'Paul Brittain']",False,False
+2014-01-16,265,"['LIVE from RIOT LA; Paul F. Tompkins', 'Lauren Lapkus', 'Harris Wittels']",False,False
+2014-01-13,264,"['Nick Kroll', 'Jenny Slate']",False,False
+2014-01-06,263,"['Ben Schwartz', 'Horatio Sanz']",False,False
+2014-01-02,2013.4,[],True,False
+2013-12-30,2013.3,[],True,False
+2013-12-26,2013.2,[],True,False
+2013-12-23,2013.1,[],True,False
+2013-12-16,262,['2013 Holiday Spectacular'],False,False
+2013-12-09,261,"['Horatio Sanz', 'Kulap Vilaysack', 'Shelby Fero']",False,False
+2013-12-05,260,"['Mike Birbiglia', 'Brendon Small', 'Jon Gabrus']",False,False
+2013-12-02,259,"['David Alan Grier', 'Lauren Lapkus', 'Joe Wengert']",False,False
+2013-11-25,258,"['Jimmy Pardo', 'Bill Callahan', 'Seth Morris']",False,False
+2013-11-21,257,"['Will Forte', 'Paul F. Tompkins']",False,False
+2013-11-18,256,"['Brendon Small', 'Cameron Esposito', 'James Adomian']",False,False
+2013-11-11,255,"['Rob Delaney', 'Mookie Blaiklock']",False,False
+2013-11-07,254,"['LIVE from Comedy Gives Back; Zach Galifianakis', 'David Wain', 'Andy Daly']",False,False
+2013-11-04,253,"['Tim Heidecker', 'Jon Daly']",False,False
+2013-10-28,252,"['Halloween', 'Steven Yeun', 'Paul Rust', 'Molly Bretthauer', 'Nick Wiger', 'Eva Anderson', 'Caroline Anderson']",False,False
+2013-10-24,251,"['Amber Tamblyn', 'Todd Glass']",False,False
+2013-10-21,250,"['Pete Holmes', 'Jon Gabrus', 'Pamela Murphy']",False,False
+2013-10-14,249,"['Bob Odenkirk', 'The Birthday Boys']",False,False
+2013-10-10,248,"['Eric Andre', 'Lauren Lapkus']",False,False
+2013-10-07,247,"['Tim Meadows', 'Horatio Sanz']",False,False
+2013-09-30,246,"['Casey Wilson', 'June Diane Raphael']",False,False
+2013-09-23,245,"['Amy Poehler', 'Paul F. Tompkins', 'Neil Campbell']",False,False
+2013-09-16,244,"['Andy Samberg', 'Eddie Pepitone']",False,False
+2013-09-09,243,"['Maria Bamford', 'James Adomian']",False,False
+2013-09-02,242,"['Thomas Lennon', 'Rob Huebel', 'Neko Case']",False,False
+2013-08-26,241,"['Paul Scheer', 'Nick Kroll']",False,False
+2013-08-23,240,"['Edgar Wright', 'Simon Pegg', 'Nick Frost']",False,False
+2013-08-19,239,"['Jay Mohr', 'Matt Besser']",False,False
+2013-08-12,238,"['Jessica St. Clair', 'Lennon Parham', 'Jason Mantzoukas', 'Brian Huskey', 'Melissa Rauch']",False,False
+2013-08-08,237,"['Jonah Ray', 'Nick Thune', 'Eugene Cordero']",False,False
+2013-08-05,236,"['Rob Corddry', 'Paul F. Tompkins']",False,False
+2013-07-29,235,"['Doug Benson', 'Paul F. Tompkins']",False,False
+2013-07-25,234,"['Bill Hader', 'Seth Morris']",False,False
+2013-07-22,233,"['Bob Odenkirk', 'Andy Daly']",False,False
+2013-07-18,232,"['LIVE from San Diego Comic-Con; Andy Daly', 'Paul Rust']",False,False
+2013-07-15,231,"['Kumail Nanjiani', 'James Adomian']",False,False
+2013-07-11,230,"['Reggie Watts', 'Neil Campbell']",False,False
+2013-07-08,229,"['Ben Schwartz', 'Paul F. Tompkins']",False,False
+2013-07-01,228,"['John Hodgman', 'Paul F. Tompkins']",False,False
+2013-06-27,227,"['Brian Posehn', 'Jon Daly']",False,False
+2013-06-24,226,"['Paul Feig', 'Horatio Sanz']",False,False
+2013-06-17,225,"['Taran Killam', 'Paul Brittain']",False,False
+2013-06-13,224,"['Live From Austin; Paul Scheer', 'Martin Starr', 'Brandon Johnson', 'Neil Campbell']",False,False
+2013-06-10,223,['Seth Rogen'],False,False
+2013-06-03,222,"['Paul F. Tompkins', 'Gillian Jacobs', 'Mike Hanford']",False,False
+2013-05-27,221,"['Andy Richter', 'Paul F. Tompkins']",False,False
+2013-05-20,220,"['Lennon Parham', 'Jessica St. Clair']",False,False
+2013-05-13,219,"['Adam Scott', 'Harris Wittels', 'Chelsea Peretti']",False,False
+2013-05-06,218,"['4th Anniversary', 'David Wain', 'Lauren Lapkus', 'Jessica St. Clair', 'Paul F. Tompkins', 'Jason Mantzoukas', 'Paul Rust', 'Neil Campbell']",False,False
+2013-05-02,217,['Marc Maron'],False,False
+2013-04-29,216,"['Kristen Schaal', 'Michaela Watkins', 'Neil Campbell']",False,False
+2013-04-22,215,"['Bobby Moynihan', 'Paul F. Tompkins']",False,False
+2013-04-18,214,"['Jen Kirkman', 'Pamela Murphy']",False,False
+2013-04-15,213,"['Jerrod Carmichael', 'Horatio Sanz']",False,False
+2013-04-08,212,"['Brendon Walsh', 'James Adomian', 'Neil Campbell']",False,False
+2013-04-01,211,"['Jon Hamm', 'Nick Kroll']",False,False
+2013-03-25,210,"['Adam Brody', 'Lauren Lapkus', 'Joe Wengert']",False,False
+2013-03-21,209,"[""Don't Stop Or We'll Die"", 'Howard Kremer']",False,False
+2013-03-18,208,"['Steven Yeun', 'Doug Benson', 'Paul F. Tompkins']",False,False
+2013-03-14,207,"['LIVE from SXSW 2013 II; Ken Marino', 'Rob Huebel', 'Natasha Leggero', 'Martin Starr', 'Reggie Watts', 'James Adomian']",False,False
+2013-03-11,206,"['Live from SXSW 2013; Michael Cera', 'Sarah Silverman', 'Tim & Eric', 'Reggie Watts']",False,False
+2013-03-07,205,"['Anthony Jeselnik', 'Eugene Mirman', 'Nathan Fielder', 'Eugene Cordero']",False,False
+2013-03-04,204,"['Zach Galifianakis', 'Jon Daly', 'Neil Campbell']",False,False
+2013-02-25,203,"['""Weird Al"" Yankovic', 'Paul F. Tompkins']",False,False
+2013-02-21,202,"['Nick Thune', 'James Adomian', 'Lauren Lapkus']",False,False
+2013-02-18,201,"['Jon Glaser', 'Matt Besser']",False,False
+2013-02-11,200,"['Jason Mantzoukas', 'Andy Daly']",False,False
+2013-02-06,199,"['Gillian Jacobs', 'Paul F. Tompkins']",False,False
+2013-02-04,198,"['Jeffrey Ross', 'Ron Sexsmith', 'Amy Phillips', 'Neil Campbell']",False,False
+2013-01-28,197,"['Tim Heidecker', 'Paul Rust', 'Jon Daly']",False,False
+2013-01-24,196,"['Jeff Garlin', 'James Adomian']",False,False
+2013-01-21,195,"['Billy Eichner', 'Reggie Watts', 'Matt Besser']",False,False
+2013-01-14,194,"['Nick Kroll', 'Chelsea Peretti']",False,False
+2013-01-10,193,"['Kristen Schaal', 'Neil Campbell', 'Pamela Murphy']",False,False
+2013-01-07,192,"['Ben Schwartz', 'Horatio Sanz']",False,False
+2012-12-31,2012.2,[],True,False
+2012-12-24,2012.1,[],True,False
+2012-12-18,2012,['Holiday Spectacular'],False,False
+2012-12-10,190,"['Demetri Martin', 'James Adomian', 'Pamela Murphy']",False,False
+2012-12-03,189,"['Chris Fairbanks', 'Paul F. Tompkins']",False,False
+2012-11-26,188,"['Judd Apatow', 'Graham Parker', 'Jessica St. Clair']",False,False
+2012-11-19,187,"['Nat Faxon', 'Lennon Parham']",False,False
+2012-11-12,186,"['Paul F. Tompkins', 'Julie Klausner', 'Jake Fogelnest']",False,False
+2012-11-07,185,"['Chris Hardwick', 'Ike Barinholtz']",False,False
+2012-11-05,184,"['Aziz Ansari', 'Bob Odenkirk', 'Neil Campbell', 'Mike Hanford', 'James Adomian']",False,False
+2012-10-29,183,"['Halloween', 'Brett Gelman', 'Jon Daly', 'Allan McLeod', 'James Adomian']",False,False
+2012-10-24,182,"['Tim Heidecker', 'Joe Wengert', 'Lauren Lapkus']",False,False
+2012-10-22,184,"['Casey Wilson', 'Adam Pally']",False,False
+2012-10-15,180,"['Gillian Jacobs', 'Paul F. Tompkins', 'Lauren Lapkus']",False,False
+2012-10-08,179,"['Adam DeVine', 'Paul Scheer', 'Kay Cannon', 'Hana Mae Lee']",False,False
+2012-10-01,178,"['Rob Corddry', 'Jessica St. Clair']",False,False
+2012-09-24,177,"['B.J. Novak', 'Wyatt Cenac', 'Keegan-Michael Key', 'Jordan Peele']",False,False
+2012-09-17,176,"['Amy Poehler', 'Jason Mantzoukas', 'James Adomian']",False,False
+2012-09-10,175,"['Justin Kirk', 'Paul F. Tompkins']",False,False
+2012-09-03,174,"['Lizzy Caplan', 'John Mulaney', 'Nick Kroll']",False,False
+2012-08-27,173,"['Paul F. Tompkins', 'Paul Scheer', 'Brent Weinbach']",False,False
+2012-08-20,172,"['Todd Glass', 'Brian Huskey']",False,False
+2012-08-13,171,"['Megan Mullally', 'Nick Kroll', 'Stephanie Hunt']",False,False
+2012-08-06,170,"['Martin Starr', 'Lennon Parham', 'Neil Campbell']",False,False
+2012-07-30,169,"['Jay Chandrasekhar', 'Paul F. Tompkins']",False,False
+2012-07-23,168,"['Bob Odenkirk', 'Matt Besser']",False,False
+2012-07-16,167,"['Jessica St. Clair', 'Paul Rust', 'Jerrod Carmichael']",False,False
+2012-07-09,166,"['Adam Scott', 'Harris Wittels', 'Chelsea Peretti']",False,False
+2012-07-02,165,"['Andy Kindler', 'Loudon Wainwright III', 'Amy Phillips']",False,False
+2012-06-25,164,"['Tony Clifton', 'Ben Schwartz']",False,False
+2012-06-18,163,"['Ken Marino', 'Steve Agee', 'Janet Varney', 'Deanna Russo']",False,False
+2012-06-11,162,"['Andy Samberg', 'Adam Pally']",False,False
+2012-06-04,161,"['Reggie Watts', 'Tim Heidecker', 'Andy Daly', 'Jon Daly']",False,False
+2012-05-28,160,"['Sarah Silverman', 'Kyle Dunnigan']",False,False
+2012-05-21,159,"['Alison Brie', 'Jason Mantzoukas', 'Saul Goodman']",False,False
+2012-05-14,158,"['Jordan Peele', 'Gillian Jacobs']",False,False
+2012-05-07,157,"['Bobcat Goldthwait', 'Paul F Tompkins']",False,False
+2012-04-30,156,"['3rd Anniversary', 'Zach Galifianakis', 'St. Vincent', 'Special Guests']",False,False
+2012-04-23,155,"['Patton Oswalt', 'Chris Tallman']",False,False
+2012-04-16,154,"['Lennon Parham', 'Jessica St. Clair']",False,False
+2012-04-12,153,"['Will Forte', 'Leo Allen']",False,False
+2012-04-09,152,"['Ed Helms', 'Seth Morris']",False,False
+2012-04-02,151,"['Fred Savage', 'Jackie Clarke', 'Gil Ozeri']",False,False
+2012-03-26,150,"['Bobby Moynihan', 'Paul F. Tompkins']",False,False
+2012-03-19,149,"['Live At SXSW', 'Tim Heidecker', 'James Adomian', 'Seth Morris', 'Reggie Watts']",False,False
+2012-03-12,148,"['Jason Mantzoukas', 'Andy Daly']",False,False
+2012-03-05,147,"['Paul F. Tompkins', 'Greg Proops', 'James Adomian']",False,False
+2012-02-27,146,"['Reggie Watts', 'Ben Schwartz', 'Matt Besser']",False,False
+2012-02-20,145,"['David Wain', 'James Adomian']",False,False
+2012-02-13,144,"['Harris Wittels', 'Paul Rust', 'Michael Cassady', ""Don't Stop Or We'll Die""]",False,False
+2012-02-06,143,"['Weird Al Yankovic', 'Todd Glass', 'Amy Phillips']",False,False
+2012-01-30,142,"['Tim & Eric', 'James Adomian']",False,False
+2012-01-23,141,"['Tig Notaro', 'Ronna & Beverly']",False,False
+2012-01-16,140,"['Nick Offerman', 'James Adomian']",False,False
+2012-01-09,139,"['Bob Odenkirk', 'Brian Huskey']",False,False
+2012-01-02,138,"['Andy Richter', 'Paul F. Tompkins']",False,False
+2011-12-29,2011.2,[],True,False
+2011-12-26,2011.1,[],True,False
+2011-12-19,2011,['Holiday Spectacular'],False,False
+2011-12-12,135,"['Paul F. Tompkins', 'Erinn Hayes', 'Dan Telfer']",False,False
+2011-12-05,134,"['Kevin Nealon', 'Ben Schwartz', 'Amy Phillips']",False,False
+2011-11-28,133,"['Patton Oswalt', 'Chris Tallman']",False,False
+2011-11-21,132,"['David Wain', 'Margret Cho', 'James Adomian', 'Grant Lee Phillips']",False,False
+2011-11-14,131,"['Andy Daly', 'Jason Mantzoukas']",False,False
+2011-11-07,130,"['Bobby Moynihan', 'Jenny Slate', 'Elizabeth Laime']",False,False
+2011-10-31,129,"['Halloween', 'Brett Gelman', 'Jon Daly', 'Allan McCloud', 'Neil Campbell']",False,False
+2011-10-24,128,"['Jon Heder', 'Harris Wittels', 'Seth Morris']",False,False
+2011-10-17,127,"['Paul Scheer', 'Nick Swardson', 'Brody Stevens']",False,False
+2011-10-10,126,"['Jon Hamm', 'Paul F. Tompkins', 'Nick Lowe']",False,False
+2011-10-03,125,"['Sarah Silverman', 'Nick Kroll', 'Dan Mangan']",False,False
+2011-09-26,124,"['Matthew Sweet', 'Todd Barry', 'Nick Thune']",False,False
+2011-09-19,123,"['Amy Poehler', 'The Bangles', 'Adam Pally']",False,False
+2011-09-12,122,"['Zach Galifianakis', 'Paul F. Tompkins', 'Yo La Tengo']",False,False
+2011-09-05,121,"['Jimmy Pardo', 'Paul Rust', 'Rob Delaney']",False,False
+2011-08-29,120,"['Adam Scott', 'Harris Wittels', 'Chelsea Peretti']",False,False
+2011-08-22,119,"['Gillian Jacobs', 'Andy Daly']",False,False
+2011-08-15,118,"['Patton Oswalt', 'Eddie Pepitone']",False,False
+2011-08-08,117,"['David Cross', 'Ruben Fleischer', 'Chad Carter']",False,False
+2011-08-01,116,"['Todd Glass', 'Jessica St. Clair']",False,False
+2011-07-25,115,"['Paul Rudd', 'David Wain', 'Ken Marino']",False,False
+2011-07-18,114,"['Edgar Wright', 'Joe Cornish', 'Matt Besser']",False,False
+2011-07-11,113,"['Bobby Moynihan', 'Seth Morris']",False,False
+2011-07-05,112,"['""Weird Al"" Yankovic', 'Paul F. Tompkins']",False,False
+2011-07-01,111,"['Harris Wittels', 'Auction Winner David Guy Levy', '???']",False,False
+2011-06-27,110,"['Myq Kaplan', 'Colin Hanks', 'Paul Scheer']",False,False
+2011-06-20,109,"['Andy Samberg', 'Adam Pally']",False,False
+2011-06-13,108,"['Rob Corddry', 'Erinn Hayes', 'James Adomian']",False,False
+2011-06-06,107,"['John Mulaney', 'Nick Kroll']",False,False
+2011-05-30,106,"['5 Andy Richter', 'Paul F. Tompkins']",False,False
+2011-05-23,106,"['Andy Richter', 'Paul. F. Tompkins']",False,False
+2011-05-16,105,"['Jon Daly', 'Matt Walsh', 'Scot Armstrong']",False,False
+2011-05-15,102,"['Tim Heidecker', 'Neil Hamburger']",False,False
+2011-05-15,104,"['Paul Feig', 'The Birthday Boys']",False,False
+2011-05-15,103,"['2nd Anniversary', 'PFT', 'Reggie Watts', 'Andrew Daly', 'Paul Scheer', 'Tig Notaro', 'Nick Kroll', 'James Adomian']",False,False
+2011-04-18,101,"['Joe Lo Truglio', 'Casey Wilson', 'Matt Besser']",False,False
+2011-04-11,100,"['Susanna Hoffs', 'Matthew Sweet', 'Rob Huebel', 'Thomas Lennon', 'Doug Benson']",False,False
+2011-04-04,99,"['Patton Oswalt', 'Andy Daly']",False,False
+2011-03-28,98,"['Adam Scott', 'James Adomian']",False,False
+2011-03-21,97,"['Jon Hamm', 'Seth Morris']",False,False
+2011-03-14,96,"['Paul Reubens', 'Dave Foley', 'Thomas Lennon']",False,False
+2011-03-07,95,"['Natasha Leggero', 'Harris Wittels', 'Matt Besser']",False,False
+2011-02-28,94,"['Ben Schwartz', 'Andy Daly']",False,False
+2011-02-21,93,"['Reggie Watts', 'James Adomian']",False,False
+2011-02-13,92,"['Andy Richter', 'Jessica St. Clair']",False,False
+2011-02-07,91,"['""Weird Al"" Yankovic', 'Paul F. Tompkins', 'Tom Scharpling']",False,False
+2011-01-30,90,"['Brett Gelman', 'Michael Gladis', 'Maria Thayer']",False,False
+2011-01-23,89,"['Nick Kroll', 'Harris Wittels']",False,False
+2011-01-17,88,"['Chris Hardwick', 'Matt Braunger']",False,False
+2011-01-10,87,"['Nick Thune', 'Chelsea Peretti']",False,False
+2011-01-02,86,"['Patton Oswalt', 'Rob Huebel']",False,False
+2010-12-26,2010.0,[],True,False
+2010-12-20,85,"['Colin Hanks', 'Paul F. Tompkins', 'Nick Kroll', 'Seth Morris', 'Andy Daly', 'Brett Gelman', 'Neil Campbell', 'Christmas']",False,False
+2010-12-12,84,"['Harris Wittels', 'Reggie Watts', 'Eddie Pepitone']",False,False
+2010-12-05,83,"['Michael Ian Black', 'Seth Morris']",False,False
+2010-11-27,82,"['Kevin Nealon', 'Sarah Silverman', 'Tig Notaro', 'Jon Daly', 'Jerry Minor', 'Miles Archer']",False,False
+2010-11-23,81,"['Todd Barry', 'Neil Campbell', 'Paul Rust']",False,False
+2010-11-15,80,"['Adam Scott', 'Paul F. Tompkins', 'James Adomian']",False,False
+2010-11-09,79,"['Eugene Mirman', 'Jackie Clarke', 'Mookie Blaiklok']",False,False
+2010-10-31,78,"['Doug Benson', 'John Gemberling']",False,False
+2010-10-26,77,"['Halloween', 'Jerry Minor', 'Sean Dickerson', 'Allan McLeod', 'Jon Daly', 'Brett Gelman', 'Nick Wiger']",False,False
+2010-10-19,76,"['2 Zach Galifianakis', 'Paul F. Tompkins', 'Dillon Campbell']",False,False
+2010-10-13,76,"['Zach Galifianakis', 'Paul F. Tompkins', 'Dillon Campbell']",False,False
+2010-10-12,75,"['Mike Birbiglia', 'Henry Phillips', 'Matt Besser']",False,False
+2010-10-06,74,"['Jason Mantzoukas', 'Andy Daly']",False,False
+2010-09-29,73,"['Nick Swardson', 'Jon Daly']",False,False
+2010-09-22,72,"['Janeane Garofalo', 'Andy Dick', 'James Adomian']",False,False
+2010-09-15,71,"['Paul Scheer', 'Nick Kroll']",False,False
+2010-09-08,70,"['Aimee Mann', 'Jon Wurster', 'Ted Leo', 'Paul F. Tompkins']",False,False
+2010-09-01,69,"['Thomas Lennon', 'Kumail Nanjiani', 'Loch and Key']",False,False
+2010-08-26,68,"['Fred Armisen', 'Howard Kremer', 'Trainwreck']",False,False
+2010-08-19,67,"['Rob Corddry', 'Lake Bell', 'Paul F. Tompkins']",False,False
+2010-08-16,66,"['2 Bob Odenkirk', 'Brett Gelman']",False,False
+2010-08-12,66,['Bob Odenkirk'],False,False
+2010-08-05,65,"['Sklar Brothers', 'Seth Morris']",False,False
+2010-07-30,64,"['James Adomian', 'Sarah Silverman', 'Mary Lynn Rajskub']",False,False
+2010-07-23,63,"['Jon Hamm', 'Rich Sommer', 'David Koechner']",False,False
+2010-07-16,62,"['Andy Richter', 'Matt Besser', ""Don't Stop or We'll Die"", 'Paul F. Tompkins']",False,False
+2010-07-09,61,"['Jimmy Pardo', 'Rory Scovel']",False,False
+2010-07-03,60,"['Donald Glover', 'Jessica St. Clair', 'Brendon Walsh']",False,False
+2010-06-25,59,"['Paul F. Tompkins', 'Todd Glass', 'Andy Daly']",False,False
+2010-06-19,58,"['Rob Huebel', 'Steel Panther']",False,False
+2010-06-11,57,"['Brian Posehn', 'James Adomian']",False,False
+2010-06-04,56,"['David Higgins', 'Paul F. Tompkins']",False,False
+2010-05-28,55,"['Natasha Leggero', 'Jason Mantzoukas', 'Seth Morris']",False,False
+2010-05-21,54,"['Marc Maron', 'The Birthday Boys']",False,False
+2010-05-14,53,"['Weird Al Yankovic', 'Garfunkel & Oates']",False,False
+2010-05-07,52,"['Sarah Silverman', 'Harris Wittels', 'Ben Schwartz']",False,False
+2010-04-30,51,"['2 Tig Notaro', 'Rich Fulcher', 'Special Guests']",False,False
+2010-04-30,51,"['Tig Notaro', 'Rich Fulcher', 'Special Guests']",False,False
+2010-04-23,50,"['Paul Gilmartin', 'Mookie Blaiklok', 'The Thrilling Adventure Hour']",False,False
+2010-04-16,49,"['Adam Scott', 'Matt Walsh', 'June Raphael', 'James Pumphrey', 'Chris Fairbanks']",False,False
+2010-04-09,48,"['Sklar Brothers', 'Paul Scheer']",False,False
+2010-04-02,47,"['Greg Proops', 'Jon Daly']",False,False
+2010-03-26,46,"['Ben Stiller', 'Jeff Garlin', 'Paul F. Tompkins', 'Andrew Daly']",False,False
+2010-03-19,45,"['Cyber Thug', 'James Adomian', 'Craig Robinson', 'David Sitek', 'Dave Cousin', 'Brandon Johnson']",False,False
+2010-03-12,44,"['Nick Kroll', 'Paul F. Tompkins', 'Jason Woliner']",False,False
+2010-03-05,43,"['Tig Notaro', 'Casey Wilson', 'Rory Scovel']",False,False
+2010-02-26,42,"['Nick Thune', 'Matt Walsh', 'Ian Roberts', 'Danielle Shneider', 'James Pumphrey']",False,False
+2010-02-19,41,"['Aimee Mann', 'Kumail Nanjiani', 'Drew Droege']",False,False
+2010-02-12,40,"['Doug Benson', 'James Adomian', 'Harris Wittels', 'Special Guests']",False,False
+2010-02-05,39,"['Garfunkel & Oates', 'Seth Morris', 'Brendon Walsh']",False,False
+2010-02-02,,[],False,False
+2010-01-29,38,"['Paul F. Tompkins', 'Kaitlin Olson', 'Matt Gourley', 'Jeremy Carter', 'Mark McConville']",False,False
+2010-01-22,37,"['Sarah Silverman', 'Todd Glass', 'Hannibal Buress']",False,False
+2010-01-19,,[],False,False
+2010-01-15,36,"['Cyber Thug', 'Matt Besser', 'Miles Archer']",False,False
+2010-01-08,35,"['Patton Oswalt', 'Thomas Lennon', 'Brett Gelman']",False,False
+2009-12-27,2009.0,[],True,False
+2009-12-18,34,"['Jon Hamm', 'Doug Benson', 'Special Guests']",False,False
+2009-12-11,33,"['Kyle Kinane', 'Paul F. Tompkins']",False,False
+2009-12-04,32,"['Aziz Ansari', 'Brendon Small', 'Hal Rudnick']",False,False
+2009-11-27,31,"['Michael Cera', 'Harris Wittels', 'James Adomian', 'Paul F. Tompkins', 'Jimmy Pardo', 'Nick Kroll']",False,False
+2009-11-20,30,"['Matt Walsh', 'Howard Kremer', 'Dave Holmes']",False,False
+2009-11-13,29,"['Ben Schwartz', 'Chip Pope', 'James Adomian']",False,False
+2009-11-06,28,"['Paul F. Tompkins', 'Todd Glass', 'Jon Daly']",False,False
+2009-10-30,27,"['Cyber Thug', 'Miles Archer', 'Nick Kroll', ""Jerry O'Connell""]",False,False
+2009-10-23,26,"['Sarah Silverman', 'Andy Richter']",False,False
+2009-10-16,25,"['Neil Hamburger', ""Mike O'Connell"", 'Brent Weinbach']",False,False
+2009-10-09,24,"['Nick Swardson', 'Matt Walsh', 'James Adomian', 'Paul F. Tompkins']",False,False
+2009-10-02,23,"['Paul F. Tompkins', 'Weird Al Yankovic', 'Tig Notaro']",False,False
+2009-09-26,,[],False,False
+2009-09-25,22,"['Jimmy Pardo', 'Dana Gould', 'Matt Belknap', 'Special Guests']",False,False
+2009-09-18,21,"['Chris Hardwick', 'Charlyne Yi', 'Seth Morris']",False,False
+2009-09-11,20,"['Mary Lynn Rajskub', 'Reggie Watts', 'Rory Scovel']",False,False
+2009-09-04,19,"['Kevin Nealon', 'Laraine Newman', 'Casey Wilson']",False,False
+2009-08-28,18,"['Andy Kindler', 'Jerry Minor', 'Brendon Walsh']",False,False
+2009-08-21,17,"['Thomas Lennon', 'Matt Walsh', 'Matt Braunger']",False,False
+2009-08-14,16,"['Andy Dick', 'Bob Odenkirk', 'Chelsea Peretti']",False,False
+2009-08-07,15,"['Steve Agee', 'Natasha Leggero', 'Matt Besser']",False,False
+2009-07-31,14,"['Andy Samberg', 'Zach Galifianakis', 'Andrew Daly']",False,False
+2009-07-24,13,"['Jimmy Pardo', 'Graham Elwood', 'Jason Nash', 'Paul F. Tompkins', 'Jimmy Dore', 'Doug Benson']",False,False
+2009-07-17,12,"['Jon Hamm', 'Howard Kremer', 'Nick Kroll', 'Doug Benson']",False,False
+2009-07-10,11,"['Doug Benson', 'Rob Huebel']",False,False
+2009-07-03,10,"['Aimee Mann', 'Morgan Murphy', 'Seth Morris']",False,False
+2009-06-26,9,"['Dax Shepard', 'Chip Pope', 'Paul F. Tompkins']",False,False
+2009-06-19,8,"['Weird Al Yankovic', 'Paul Scheer', 'Doug Benson']",False,False
+2009-06-05,6,"['Brett Gelman', 'Howard Kremer', 'Sarah Silverman']",False,False
+2009-06-05,7,"['Sklar Brothers', 'Paul Rust', 'Paul F. Tompkins', 'Doug Benson']",False,False
+2009-05-29,5,"['Jimmy Pardo', 'Paul Gilmartin', 'Garfunkel & Oates', 'Matt Belknap', 'Pat Francis', 'Doug Benson']",False,False
+2009-05-22,4,"['Chris Hardwick', 'Mike Phirman', 'Matt Mira']",False,False
+2009-05-15,3,"['Greg Behrendt', 'Jackie Clarke', 'Nick Thune']",False,False
+2009-05-08,2,"['Aziz Ansari', 'Kevin Nealon']",False,False
+2009-05-01,1,"['Thomas Lennon', 'Rob Huebel']",False,False
