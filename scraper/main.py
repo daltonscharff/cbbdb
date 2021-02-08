@@ -16,4 +16,4 @@ rss_eps = pd.read_csv("data/rss_episodes.csv")
 
 episodes = pd.merge(earwolf_eps, rss_eps, on=[
                     "number", "bestOf", "live"], how="inner")
-episodes.to_csv("data/merged_episodes.csv")
+episodes.to_csv("data/merged_episodes.csv", index=False)
