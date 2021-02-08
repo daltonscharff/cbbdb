@@ -15,7 +15,7 @@ export default function Guests({ guests }) {
             onClick={() => { selected === guest.id ? setSelected(null) : setSelected(guest.id) }}
             className="cursor-pointer"
           >
-            <div className="flex flex-row">
+            <div className="flex flex-row items-center">
               <div className="w-full font-bold px-4">{guest.name}</div>
             </div>
           </Segment>

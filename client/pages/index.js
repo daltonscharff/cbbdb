@@ -16,14 +16,14 @@ export default function Episodes({ episodes }) {
             onClick={() => { selected === episode.id ? setSelected(null) : setSelected(episode.id) }}
             className="cursor-pointer"
           >
-            <div className="flex flex-row">
+            <div className="flex flex-row items-center">
               <div className="text-left">{episode.number}</div>
               <div className="w-full font-bold px-4">{episode.title}</div>
               <div className="w-48 text-right">{dayjs(episode.releaseDate).format("MMMM D, YYYY")}</div>
             </div>
           </Segment>
           <Segment className={`flex flex-col px-3 ${selected === episode.id ? "" : "hidden"}`}>
-            <div className="pb-5 text-sm">{episode.description}</div>
+            <div className="pb-5">{episode.description}</div>
             <RelatedItems
               guestList={episode.guests}
               characterList={episode.characters}

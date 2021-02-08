@@ -15,12 +15,11 @@ export default function Characters({ characters }) {
             onClick={() => { selected === character.id ? setSelected(null) : setSelected(character.id) }}
             className="cursor-pointer"
           >
-            <div className="flex flex-row">
+            <div className="flex flex-row items-center">
               <div className="w-full font-bold px-4">{character.name}</div>
             </div>
           </Segment>
           <Segment className={`flex flex-col px-3 ${selected === character.id ? "" : "hidden"}`}>
-            <div className="pb-5 text-sm">{character.description}</div>
             <RelatedItems
               episodeList={character.episodes}
               guestList={character.guests}
