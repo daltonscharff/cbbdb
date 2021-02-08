@@ -6,7 +6,7 @@ export function RelatedItems({ episodeList = [], guestList = [], characterList =
     <List>
       <List.Item className="font-bold">Episodes</List.Item>
       {episodeList.map(episode => (
-        <Link key={episode.id} href={`/${episode.id}`}>
+        <Link key={episode.id} href={`/#${episode.id}`}>
           <List.Item as='a'>{episode.title}</List.Item>
         </Link>
       ))}
@@ -17,7 +17,7 @@ export function RelatedItems({ episodeList = [], guestList = [], characterList =
     <List>
       <List.Item className="font-bold">Guests</List.Item>
       {guestList.map(guest => (
-        <Link key={guest.id} href={`/guests/${guest.id}`}>
+        <Link key={guest.id} href={`/guests#${guest.id}`}>
           <List.Item as='a'>{guest.name}</List.Item>
         </Link>
       ))}
@@ -28,7 +28,7 @@ export function RelatedItems({ episodeList = [], guestList = [], characterList =
     <List>
       <List.Item className="font-bold">Characters</List.Item>
       {characterList.map(character => (
-        <Link key={character.id} href={`/characters/${character.id}`}>
+        <Link key={character.id} href={`/characters#${character.id}`}>
           <List.Item as='a'>{character.name}</List.Item>
         </Link>
       ))}
