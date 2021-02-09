@@ -1,9 +1,6 @@
 import requests
 import os
 
-# from dotenv import load_dotenv
-# load_dotenv()
-
 url = f"https://api.contentful.com/spaces/{os.getenv('CONTENTFUL_SPACE_ID')}/environments/{os.getenv('CONTENTFUL_ENVIRONMENT')}/entries"
 
 
@@ -26,10 +23,15 @@ def writeGuest(name, description=None):
             }
         }
     })
+
+    if res.status_code >= 300:
+        print(f"Could not write guest: {name}")
+        print(res.json())
+
     return res.json()
 
 
-def writeEpisode(title, number=None, releaseDate=None, description=None, guest_ids=[], bestOf=False, live=False):
+def writeEpisode(title, number=None, releaseDate=None, description="", guest_ids=[], bestOf=False, live=False, earwolfUrl=""):
     guests = [{
         "sys": {
             "type": "Link",
@@ -37,7 +39,8 @@ def writeEpisode(title, number=None, releaseDate=None, description=None, guest_i
             "id": id
         }
     } for id in guest_ids]
-    res = requests.post(url, headers=getHeaders("episode"), json={
+
+    json_data = {
         "fields": {
             "title": {
                 "en-US": title
@@ -59,13 +62,17 @@ def writeEpisode(title, number=None, releaseDate=None, description=None, guest_i
             },
             "live": {
                 "en-US": live
+            },
+            "earwolfUrl": {
+                "en-US": earwolfUrl
             }
         }
-    })
+    }
+
+    res = requests.post(url, headers=getHeaders("episode"), json=json_data)
+
+    if res.status_code >= 300:
+        print(f"Could not write episode: {title}")
+        print(res.json())
+
     return res.json()
-
-
-# writeEpisode("Test Episode", 123.45, "2021-01-02",
-#              "This is a description", ["4ahH7S9IUx6wz0re09BsYY"], False, True)
-
-# writeGuest("Test Guest", "Test guest desc.")
