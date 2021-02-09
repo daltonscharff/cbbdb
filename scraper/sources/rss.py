@@ -57,7 +57,7 @@ def scrape():
     episodes = [{
         "releaseDate": parse_release_date(i.pubDate.string),
         "number": parse_number(i.title.string),
-        "guests": json.dumps(parse_guests(i.title.string)),
+        "guests": parse_guests(i.title.string),
         "bestOf": parse_best_of(i.title.string),
         "live": False
     } for i in items]

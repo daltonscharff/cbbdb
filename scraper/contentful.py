@@ -29,14 +29,14 @@ def writeGuest(name, description=None):
     return res.json()
 
 
-def writeEpisode(title, number=None, releaseDate=None, description=None, guests=[], bestOf=False, live=False):
+def writeEpisode(title, number=None, releaseDate=None, description=None, guest_ids=[], bestOf=False, live=False):
     guests = [{
         "sys": {
             "type": "Link",
             "linkType": "Entry",
             "id": id
         }
-    } for id in guests]
+    } for id in guest_ids]
     res = requests.post(url, headers=getHeaders("episode"), json={
         "fields": {
             "title": {
