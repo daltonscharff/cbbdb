@@ -62,5 +62,5 @@ def scrape():
         "live": False
     } for i in items]
 
-    return pd.DataFrame(data=episodes)
     print("RSS DONE")
+    return pd.DataFrame(data=episodes)

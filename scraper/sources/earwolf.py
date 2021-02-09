@@ -41,6 +41,6 @@ def scrape():
         "guests": json.dumps([str(span.string) for span in i.find_all("span")]),
         "live": False
     } for i in li]
-    
-    return pd.DataFrame(data=episodes)
+
     print("EARWOLF DONE")
+    return pd.DataFrame(data=episodes)
