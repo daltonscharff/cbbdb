@@ -4,7 +4,7 @@ import re
 import datetime
 import os
 import requests
-import logging
+import json
 import pandas as pd
 
 best_of_regex = "Best of (\d{4})(?:\sPa?r?t.?\s?(\d))?"
@@ -30,7 +30,7 @@ def parse_number(s: str) -> float:
         try:
             return re.findall(number_regex, s)[0]
         except:
-            logging.warning(f"Could not parse number for {s}")
+            print(f"Could not parse number for {s}")
             return None
 
 
@@ -38,7 +38,7 @@ def parse_guests(s: str) -> List[str]:
     guests_parse = re.findall(guests_regex, s)
 
     if len(guests_parse) > 0:
-        return [g.strip() for g in guests_parse[0].split(',')]
+        return json.dumps([g.strip() for g in guests_parse[0].split(',')])
     else:
         return []
 
@@ -48,7 +48,7 @@ def parse_best_of(s: str) -> bool:
 
 
 def scrape():
-    logging.debug("STARTING RSS")
+    print("STARTING RSS")
     rawData = requests.get(os.getenv("PREMIUM_RSS_FEED")).text
 
     soup = BeautifulSoup(rawData, "xml")
@@ -57,10 +57,10 @@ def scrape():
     episodes = [{
         "releaseDate": parse_release_date(i.pubDate.string),
         "number": parse_number(i.title.string),
-        "guests": parse_guests(i.title.string),
+        "guests": json.dumps(parse_guests(i.title.string)),
         "bestOf": parse_best_of(i.title.string),
         "live": False
     } for i in items]
 
     return pd.DataFrame(data=episodes)
-    logging.debug("RSS DONE")
+    print("RSS DONE")
