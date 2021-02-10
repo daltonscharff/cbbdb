@@ -31,7 +31,7 @@ jobs:
           CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
 
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+        uses: JamesIves/github-pages-deploy-action@4.0.0
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
           folder: ./client/out
