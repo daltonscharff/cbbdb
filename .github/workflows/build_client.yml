@@ -26,9 +26,10 @@ jobs:
           npm install
           npm run build
         env:
-          CONTENTFUL_ENVIRONMENT: ${{ secrets.CONTENTFUL_ENVIRONMENT }}
+          CONTENTFUL_ENVIRONMENT: master
           CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
           CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
+          PROJECT_BASEPATH: /cbbdb
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.0.0
