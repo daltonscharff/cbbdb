@@ -45,20 +45,20 @@ class ContentfulClient {
       {
         id: episode.sys.id,
         ...episode.fields,
-        guests: episode.fields.guests.map((guest) => {
+        guests: episode.fields.guests ? episode.fields.guests.map((guest) => {
           const guestEntry = episodes.includes.Entry.find(entry => entry.sys.id === guest.sys.id);
           return {
-            id: guestEntry.sys.id,
-            name: guestEntry.fields.name
+            id: guestEntry ? guestEntry.sys.id : null,
+            name: guestEntry ? guestEntry.fields.name : null
           }
-        }),
-        characters: episode.fields.characters.map((character) => {
+        }) : [],
+        characters: episode.fields.characters ? episode.fields.characters.map((character) => {
           const characterEntry = episodes.includes.Entry.find(entry => entry.sys.id === character.sys.id);
           return {
-            id: characterEntry.sys.id,
-            name: characterEntry.fields.name
+            id: characterEntry ? characterEntry.sys.id : null,
+            name: characterEntry ? characterEntry.fields.name : null
           }
-        })
+        }) : []
       }
     ))
   }
@@ -69,10 +69,10 @@ class ContentfulClient {
     let episodes = [];
 
     try {
-      characters = guest.fields.characters.map(character => ({
+      characters = guest.fields.characters ? guest.fields.characters.map(character => ({
         id: character.sys.id,
         name: character.fields.name
-      }))
+      })) : []
     } catch (e) { }
 
     try {

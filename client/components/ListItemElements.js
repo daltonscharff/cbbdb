@@ -5,7 +5,7 @@ export function RelatedItems({ episodeList = [], guestList = [], characterList =
   const episodeColumn = <Grid.Column>
     <List>
       <List.Item className="font-bold">Episodes</List.Item>
-      {episodeList.map(episode => (
+      {episodeList.map(episode => episode.id === null ? null : (
         <Link key={episode.id} href={`/#${episode.id}`}>
           <List.Item as='a'>{episode.title}</List.Item>
         </Link>
@@ -16,7 +16,7 @@ export function RelatedItems({ episodeList = [], guestList = [], characterList =
   const guestColumn = <Grid.Column>
     <List>
       <List.Item className="font-bold">Guests</List.Item>
-      {guestList.map(guest => (
+      {guestList.map(guest => guest.id === null ? null : (
         <Link key={guest.id} href={`/guests#${guest.id}`}>
           <List.Item as='a'>{guest.name}</List.Item>
         </Link>
@@ -27,7 +27,7 @@ export function RelatedItems({ episodeList = [], guestList = [], characterList =
   const characterColumn = <Grid.Column>
     <List>
       <List.Item className="font-bold">Characters</List.Item>
-      {characterList.map(character => (
+      {characterList.map(character => character.id === null ? null : (
         <Link key={character.id} href={`/characters#${character.id}`}>
           <List.Item as='a'>{character.name}</List.Item>
         </Link>
