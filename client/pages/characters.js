@@ -1,18 +1,15 @@
-import { useState } from 'react';
-import { cc } from "../services/contentful";
 import { Segment } from 'semantic-ui-react';
+import { cc } from "../services/contentful";
 import ListLayout from '../components/ListLayout';
 import { RelatedItems } from '../components/ListItemElements';
 
-export default function Characters({ characters }) {
-  const [selected, setSelected] = useState(null);
-
+export default function Characters({ characters, selected, toggleSelected }) {
   return (
     <ListLayout activePage="characters">
       {characters.map(character => (
         <Segment.Group key={character.id} id={character.id}>
           <Segment
-            onClick={() => { selected === character.id ? setSelected(null) : setSelected(character.id) }}
+            onClick={() => { toggleSelected(character.id) }}
             className="cursor-pointer"
           >
             <div className="flex flex-row items-center">
@@ -31,7 +28,7 @@ export default function Characters({ characters }) {
   )
 }
 
-export async function getStaticProps(context) {
+export async function getStaticProps() {
   return {
     props: {
       characters: await cc.getCharacters()
