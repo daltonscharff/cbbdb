@@ -20,6 +20,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Cache
+        uses: actions/cache@v2
+        with:
+          path: ${{ github.workspace }}/client/.next/cache
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}
+
       - name: Setup Node
         uses: actions/setup-node@v1
 
