@@ -1,0 +1,4 @@
+- [ ] caching in build client
+- [ ] sticky header with title
+- [ ] Azure function to scrape new episodes
+- [ ] filtering and search
