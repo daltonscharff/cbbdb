@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
+import "semantic-ui-css/semantic.min.css";
+import "tailwindcss/tailwind.css";
 
 
 function CBBDb({ Component, pageProps }) {
@@ -30,8 +32,7 @@ function CBBDb({ Component, pageProps }) {
     <Head>
       <title>The Comedy Bang! Bang! Database</title>
       <link rel="icon" href="/favicon.png" />
-      <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"></link>
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"></link>
+      {/* <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"></link> */}
     </Head>
     <Component
       selected={selected}

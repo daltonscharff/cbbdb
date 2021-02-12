@@ -1,3 +1,4 @@
+- [x] readd semantic and tailwindcss
 - [ ] caching in build client
 - [ ] sticky header with title
 - [ ] Azure function to scrape new episodes

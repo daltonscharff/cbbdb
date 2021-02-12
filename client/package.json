@@ -8,12 +8,15 @@
     "start": "next start"
   },
   "dependencies": {
+    "autoprefixer": "^10.2.4",
     "contentful": "^8.1.7",
     "dayjs": "^1.10.4",
     "next": "10.0.6",
+    "postcss": "^8.2.6",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "semantic-ui-css": "^2.4.1",
-    "semantic-ui-react": "^2.0.3"
+    "semantic-ui-react": "^2.0.3",
+    "tailwindcss": "^2.0.3"
   }
 }
