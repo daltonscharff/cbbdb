@@ -8,17 +8,20 @@ function CBBDb({ Component, pageProps }) {
   const router = useRouter();
 
   useEffect(() => {
-    const idHash = router.asPath.split(/#([a-z0-9]+)/gi)[1] || null;
-    setSelected(idHash)
-  }, [])
+    const idHash = router.asPath.split(/#([a-z0-9]+)/gi)[1];
+    if (idHash) {
+      setSelected(idHash)
+    }
+  }, [router])
 
   const toggleSelected = (id) => {
     const route = router.pathname;
-    if (selected === id) {
+    if (router.asPath != route) {
       router.push(route, undefined, { shallow: true })
+    }
+    if (selected === id) {
       setSelected(null);
     } else {
-      router.push(`${route}#${id}`, undefined, { shallow: true })
       setSelected(id);
     }
   }
