@@ -1,18 +1,15 @@
-import { useState } from 'react';
-import { cc } from "../services/contentful";
 import { Segment } from 'semantic-ui-react';
+import { cc } from "../services/contentful";
 import ListLayout from '../components/ListLayout';
 import { RelatedItems } from '../components/ListItemElements';
 
-export default function Guests({ guests }) {
-  const [selected, setSelected] = useState(null);
-
+export default function Guests({ guests, selected, toggleSelected }) {
   return (
     <ListLayout activePage="guests">
       {guests.map(guest => (
         <Segment.Group key={guest.id} id={guest.id}>
           <Segment
-            onClick={() => { selected === guest.id ? setSelected(null) : setSelected(guest.id) }}
+            onClick={() => { toggleSelected(guest.id) }}
             className="cursor-pointer"
           >
             <div className="flex flex-row items-center">
@@ -31,7 +28,7 @@ export default function Guests({ guests }) {
   )
 }
 
-export async function getStaticProps(context) {
+export async function getStaticProps() {
   return {
     props: {
       guests: await cc.getGuests()

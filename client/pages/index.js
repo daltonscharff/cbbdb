@@ -1,19 +1,16 @@
-import { useState } from 'react';
 import dayjs from 'dayjs';
-import { cc } from "../services/contentful";
 import { Segment } from 'semantic-ui-react';
+import { cc } from "../services/contentful";
 import ListLayout from '../components/ListLayout';
 import { RelatedItems } from '../components/ListItemElements';
 
-export default function Episodes({ episodes }) {
-  const [selected, setSelected] = useState(null);
-
+export default function Episodes({ episodes, selected, toggleSelected }) {
   return (
     <ListLayout activePage="episodes">
       {episodes.map(episode => (
         <Segment.Group key={episode.id} id={episode.id}>
           <Segment
-            onClick={() => { selected === episode.id ? setSelected(null) : setSelected(episode.id) }}
+            onClick={() => toggleSelected(episode.id)}
             className="cursor-pointer"
           >
             <div className="flex flex-row items-center">
@@ -35,7 +32,7 @@ export default function Episodes({ episodes }) {
   )
 }
 
-export async function getStaticProps(context) {
+export async function getStaticProps() {
   return {
     props: {
       episodes: await cc.getEpisodes()
