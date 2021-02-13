@@ -1,6 +1,4 @@
-- [x] readd semantic and tailwindcss
-- [x] header with title
-- [ ] footer
+- [x] fix header on mobile
+- [x] footer
 - [ ] Azure function to scrape new episodes
-- [ ] caching in build client
 - [ ] filtering and search
