@@ -1,6 +1,6 @@
 import { cc } from "../services/contentful";
 import ListLayout from '../components/ListLayout';
-import { RelatedItems } from '../components/ListItemElements';
+import { RelatedItems } from '../components/RelatedItems';
 
 export default function Characters({ characters, selected, toggleSelected }) {
   return (

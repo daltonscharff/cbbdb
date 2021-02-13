@@ -1,13 +1,13 @@
 import dayjs from 'dayjs';
 import { cc } from "../services/contentful";
 import ListLayout from '../components/ListLayout';
-import { RelatedItems } from '../components/ListItemElements';
+import { RelatedItems } from '../components/RelatedItems';
 
 export default function Episodes({ episodes, selected, toggleSelected }) {
   return (
     <ListLayout activePage="episodes">
       {episodes.map((episode, i) => (
-        <div key={episode.id} id={episode.id} className={`px-2 ${i < episodes.length - 1 ? "border-b" : ""}`}>
+        <div key={episode.id} id={episode.id} className={`px-2 ${i > 0 ? "border-t" : ""} ${selected === episode.id ? "shadow-md border-0" : ""}`}>
           <div
             onClick={() => toggleSelected(episode.id)}
             className="cursor-pointer py-4"
