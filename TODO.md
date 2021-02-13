@@ -1,4 +1,5 @@
 - [x] fix header on mobile
 - [x] footer
+- [ ] center items on guests and characters pages
 - [ ] Azure function to scrape new episodes
 - [ ] filtering and search

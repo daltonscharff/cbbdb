@@ -6,7 +6,7 @@ export default function Guests({ guests, selected, toggleSelected }) {
   return (
     <ListLayout activePage="guests">
       {guests.map((guest, i) => (
-        <div key={guest.id} id={guest.id} className={`px-2 ${i < guests.length - 1 ? "border-b" : ""}`}>
+        <div key={guest.id} id={guest.id} className={`px-2 ${i > 0 ? "border-t" : ""} ${selected === guest.id ? "shadow-inner bg-gray-50" : ""}`}>
           <div
             onClick={() => { toggleSelected(guest.id) }}
             className="cursor-pointer py-4"
