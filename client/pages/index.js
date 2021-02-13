@@ -7,7 +7,7 @@ export default function Episodes({ episodes, selected, toggleSelected }) {
   return (
     <ListLayout activePage="episodes">
       {episodes.map((episode, i) => (
-        <div key={episode.id} id={episode.id} className={`px-2 ${i > 0 ? "border-t" : ""} ${selected === episode.id ? "shadow-md border-0" : ""}`}>
+        <div key={episode.id} id={episode.id} className={`px-2 ${i > 0 ? "border-t" : ""} ${selected === episode.id ? "shadow-inner bg-gray-50" : ""}`}>
           <div
             onClick={() => toggleSelected(episode.id)}
             className="cursor-pointer py-4"
