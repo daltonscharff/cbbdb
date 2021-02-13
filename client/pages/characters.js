@@ -1,4 +1,3 @@
-import { Segment } from 'semantic-ui-react';
 import { cc } from "../services/contentful";
 import ListLayout from '../components/ListLayout';
 import { RelatedItems } from '../components/ListItemElements';
@@ -6,23 +5,23 @@ import { RelatedItems } from '../components/ListItemElements';
 export default function Characters({ characters, selected, toggleSelected }) {
   return (
     <ListLayout activePage="characters">
-      {characters.map(character => (
-        <Segment.Group key={character.id} id={character.id}>
-          <Segment
+      {characters.map((character, i) => (
+        <div key={character.id} id={character.id} className={`px-2 ${i < characters.length - 1 ? "border-b" : ""}`}>
+          <div
             onClick={() => { toggleSelected(character.id) }}
-            className="cursor-pointer"
+            className="cursor-pointer py-4"
           >
             <div className="flex flex-row items-center">
               <div className="w-full font-bold px-4">{character.name}</div>
             </div>
-          </Segment>
-          <Segment className={`flex flex-col px-3 ${selected === character.id ? "" : "hidden"}`}>
+          </div>
+          <div className={`flex flex-col pb-4 ${selected === character.id ? "" : "hidden"}`}>
             <RelatedItems
               episodeList={character.episodes}
               guestList={character.guests}
             />
-          </Segment>
-        </Segment.Group>
+          </div>
+        </div>
       ))}
     </ListLayout>
   )
