@@ -1,7 +1,6 @@
 # %%
 import pandas as pd
 import json
-import importlib
 import datetime
 import sys
 from sources import earwolf, rss
@@ -9,8 +8,6 @@ import contentful_helper as contentful
 
 
 # %%
-importlib.reload(contentful)
-
 rss_eps = rss.scrape()
 newest_saved_episode = contentful.get_newest_episode()
 
