@@ -74,7 +74,7 @@ def get_newest_episode():
         {"limit": 1, "content_type": "episode", "order": "-fields.releaseDate"})
     if len(entries) == 0:
         return None
-    return entries[0]["sys"]["id"]
+    return entries[0]
 
 
 def get_guest(name):
@@ -82,7 +82,7 @@ def get_guest(name):
         {"limit": 1, "content_type": "guest", "fields.name": name})
     if len(entries) == 0:
         return None
-    return entries[0]["sys"]["id"]
+    return entries[0]
 
 
 def publish(id):
