@@ -22,7 +22,7 @@ jobs:
           python-version: 3.8
 
       - name: Execute Script
-        run: newest_episode_scraper.py
+        run: python newest_episode_scraper.py
         env:
           CONTENTFUL_ENVIRONMENT: master
           CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
