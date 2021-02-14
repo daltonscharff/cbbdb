@@ -21,6 +21,7 @@ newest_saved_episode_date = newest_saved_episode.fields()[
 
 if newest_episode_date <= newest_saved_episode_date:
     print("No new episodes")
+    print(0)
     sys.exit(0)
 else:
     print(f"New episode released on: {newest_episode_date}")
@@ -66,3 +67,4 @@ print(f"New episodes: {new_episodes}")
 for episode in new_episodes:
     id = contentful.write_episode(title=episode["title"], number=episode["number"], releaseDate=episode["releaseDate"],guest_ids=episode["guest_ids"], bestOf=episode["bestOf"], earwolfUrl=episode["earwolfUrl"]).id
     contentful.publish(id)
+print(len(new_episodes))
