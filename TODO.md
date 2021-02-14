@@ -1,4 +1,6 @@
 - [x] fix header on mobile
 - [x] footer
-- [ ] Azure function to scrape new episodes
+- [ ] Github action to scrape new episodes
+- [ ] change font color (try text-gray-900)
+- [ ] add react-window
 - [ ] filtering and search

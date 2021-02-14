@@ -6,7 +6,7 @@ export default function Characters({ characters, selected, toggleSelected }) {
   return (
     <ListLayout activePage="characters">
       {characters.map((character, i) => (
-        <div key={character.id} id={character.id} className={`px-2 ${i < characters.length - 1 ? "border-b" : ""}`}>
+        <div key={character.id} id={character.id} className={`px-2 ${i > 0 ? "border-t" : ""} ${selected === character.id ? "shadow-inner bg-gray-50" : ""}`}>
           <div
             onClick={() => { toggleSelected(character.id) }}
             className="cursor-pointer py-4"

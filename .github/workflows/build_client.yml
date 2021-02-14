@@ -1,9 +1,9 @@
 name: Build and Deploy
 
 on:
-  push:
-    branches:
-      - master
+  # push:
+  #   branches:
+  #     - master
   repository_dispatch:
     types: [publish-event]
 

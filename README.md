@@ -2,8 +2,8 @@
 
 A database of characters, episodes, and guests for the podcast, *Comedy Bang! Bang!*. 
 
-## Purpose
-My goal was to scrape *Comedy Bang! Bang!* episode, character, and guest data automatically from both the RSS feed and Earwolf website. In its current state, this program can parse episode and guest data and link guests to episodes, but unfortunately relies on manual entry for all character data.
+## About
+This database contains data about guests and episodes of the *Comedy Bang! Bang!*  podcast that is automatically scraped from the data sources listed below. Character data must be entered manually. The data is hosted on Contentful. The client is statically generated with Next.js and built using Github Actions.
 
 ## Data Sources
 - [Earwolf](https://www.earwolf.com/show/comedy-bang-bang/)

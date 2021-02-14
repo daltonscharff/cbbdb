@@ -31,6 +31,9 @@ function CBBDb({ Component, pageProps }) {
   return <div>
     <Head>
       <title>The Comedy Bang! Bang! Database</title>
+      <meta name="description" content="The encyclopedic compendium of all things Comedy Bang! Bang!" />
+      <meta name="keywords" content="cbb podcast threedom" />
+      <meta name="author" content="Dalton Scharff" />
       <link rel="icon" href="/favicon.png" />
     </Head>
     <Component

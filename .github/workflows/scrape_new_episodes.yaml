@@ -1,0 +1,31 @@
+name: Scrape New Episodes
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 10 * * *"
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./scraper
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+
+      - name: Execute Script
+        run: newest_episode_scraper.py
+        env:
+          CONTENTFUL_ENVIRONMENT: master
+          CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
+          CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
+          CONTENTFUL_PAT: ${{ secrets.CONTENTFUL_PAT }}
+          PREMIUM_RSS_FEED: ${{ secrets.PREMIUM_RSS_FEED }}
