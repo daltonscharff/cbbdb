@@ -29,8 +29,7 @@ jobs:
       - name: Execute Script
         id: main
         run: |
-          OUTPUT = $(python newest_episode_scraper.py | tail -1) &&
-          echo "::set-output name=OUTPUT::$OUTPUT"
+          python newest_episode_scraper.py > cron.log
         env:
           CONTENTFUL_ENVIRONMENT: master
           CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
@@ -39,9 +38,9 @@ jobs:
           PREMIUM_RSS_FEED: ${{ secrets.PREMIUM_RSS_FEED }}
 
       - name: Run Build Client Action
-        if: steps.main.outputs.OUTPUT > 0
+        if: (cron.log | tail -n 1) > 0
         run: echo "NEED TO RUN BUILD CLIENT ACTION"
 
       - name: Do Nothing
-        if: steps.main.outputs.OUTPUT == 0
+        if: (cron.log | tail -n 1) == 0
         run: echo "NOTHING NEEDS TO BE DONE"
