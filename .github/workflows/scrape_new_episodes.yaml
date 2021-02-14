@@ -3,7 +3,7 @@ name: Scrape New Episodes
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 10 * * *"
+    - cron: "0 10 * * 1,4"
 
 jobs:
   run:
@@ -28,21 +28,10 @@ jobs:
 
       - name: Execute Script
         id: main
-        shell: bash
-        run: |
-          OUTPUT=0
-          python newest_episode_scraper.py
+        run: python newest_episode_scraper.py
         env:
           CONTENTFUL_ENVIRONMENT: master
           CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
           CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
           CONTENTFUL_PAT: ${{ secrets.CONTENTFUL_PAT }}
           PREMIUM_RSS_FEED: ${{ secrets.PREMIUM_RSS_FEED }}
-
-      - name: Run Build Client Action
-        if: ${{ steps.main.outputs.OUTPUT }} > 0
-        run: echo "NEED TO RUN BUILD CLIENT ACTION"
-
-      - name: Do Nothing
-        if: ${{ steps.main.outputs.OUTPUT }} == 0
-        run: echo "NOTHING NEEDS TO BE DONE"

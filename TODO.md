@@ -1,6 +1,5 @@
-- [x] fix header on mobile
-- [x] footer
-- [ ] Github action to scrape new episodes
+- [x] Github action to scrape new episodes
 - [ ] change font color (try text-gray-900)
 - [ ] add react-window
 - [ ] filtering and search
+- [ ] modify Github actions to only execute build_client when there are new episodes

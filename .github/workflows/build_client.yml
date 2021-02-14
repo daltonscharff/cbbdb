@@ -1,12 +1,11 @@
 name: Build and Deploy
 
 on:
-  # push:
-  #   branches:
-  #     - master
-  repository_dispatch:
-    types: [publish-event]
-
+  push:
+    branches:
+      - master
+  schedule:
+    - cron: "5 10 * * 1,4"
   workflow_dispatch:
 
 jobs:
