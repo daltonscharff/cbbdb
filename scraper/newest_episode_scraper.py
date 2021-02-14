@@ -22,6 +22,8 @@ newest_saved_episode_date = newest_saved_episode.fields()[
 if newest_episode_date <= newest_saved_episode_date:
     print("No new episodes")
     sys.exit(0)
+else:
+    print(f"New episode released on: {newest_episode_date}")
 
 earwolf_eps = earwolf.scrape()
 
@@ -43,7 +45,6 @@ for i, row in episodes.iterrows():
     if datetime.date.fromisoformat(row["releaseDate"]) > newest_saved_episode_date:
         new_episodes.append(row.to_dict())
 
-
 # %%
 # For each guest, save only if they are new, and get id
 
@@ -56,12 +57,12 @@ for episode in new_episodes:
             contentful.publish(g.id)
         guest_ids.append(g.id)
     episode["guest_ids"] = guest_ids
+print(f"New episodes: {new_episodes}")
 
 
 # %%
 # Write new episodes
 
 for episode in new_episodes:
-    id = contentful.write_episode(title=episode["title"], number=episode["number"], releaseDate=episode["releaseDate"],
-                                  guest_ids=episode["guest_ids"], bestOf=episode["bestOf"], earwolfUrl=episode["earwolfUrl"]).id
+    id = contentful.write_episode(title=episode["title"], number=episode["number"], releaseDate=episode["releaseDate"],guest_ids=episode["guest_ids"], bestOf=episode["bestOf"], earwolfUrl=episode["earwolfUrl"]).id
     contentful.publish(id)

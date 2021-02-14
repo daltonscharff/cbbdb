@@ -41,7 +41,7 @@ def write_episode(title, number=None, releaseDate=None, description="", guest_id
                 "en-US": title
             },
             "number": {
-                "en-US": number
+                "en-US": float(number)
             },
             "releaseDate": {
                 "en-US": releaseDate
