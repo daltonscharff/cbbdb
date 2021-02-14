@@ -27,6 +27,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Execute Script
+        id: main
         run: |
           OUTPUT = $(python newest_episode_scraper.py | tail -1) &&
           echo "::set-output name=OUTPUT::$OUTPUT"
