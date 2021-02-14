@@ -1,5 +1,4 @@
 from dotenv import load_dotenv
-import requests
 import os
 import contentful
 import contentful_management
@@ -8,24 +7,12 @@ load_dotenv()
 
 cc = contentful.Client(os.getenv("CONTENTFUL_SPACE_ID"), os.getenv(
     "CONTENTFUL_ACCESS_TOKEN"))
-
 cm = contentful_management.Client(os.getenv("CONTENTFUL_PAT"))
-
-management_url = f"https://api.contentful.com/spaces/{os.getenv('CONTENTFUL_SPACE_ID')}/environments/{os.getenv('CONTENTFUL_ENVIRONMENT')}/entries"
-
-delivery_url = f"https://cdn.contentful.com/spaces/{os.getenv('CONTENTFUL_SPACE_ID')}/environments/{os.getenv('CONTENTFUL_ENVIRONMENT')}/entries"
-
-
-def get_headers(content_type):
-    return {
-        "Authorization": f"Bearer {os.getenv('CONTENTFUL_PAT')}",
-        "Content-Type": "application/vnd.contentful.management.v1+json",
-        "X-Contentful-Content-Type": content_type
-    }
 
 
 def write_guest(name, description=None):
-    res = requests.post(management_url, headers=get_headers("guest"), json={
+    entry = cm.entries(os.getenv("CONTENTFUL_SPACE_ID"), os.getenv("CONTENTFUL_ENVIRONMENT")).create(None, {
+        "content_type_id": "guest",
         "fields": {
             "name": {
                 "en-US": name
@@ -35,12 +22,7 @@ def write_guest(name, description=None):
             }
         }
     })
-
-    if res.status_code >= 300:
-        print(f"Could not write guest: {name}")
-        print(res.json())
-
-    return res.json()
+    return entry
 
 
 def write_episode(title, number=None, releaseDate=None, description="", guest_ids=[], bestOf=False, live=False, earwolfUrl=""):
@@ -53,6 +35,7 @@ def write_episode(title, number=None, releaseDate=None, description="", guest_id
     } for id in guest_ids]
 
     json_data = {
+        "content_type_id": "episode",
         "fields": {
             "title": {
                 "en-US": title
@@ -81,32 +64,17 @@ def write_episode(title, number=None, releaseDate=None, description="", guest_id
         }
     }
 
-    res = requests.post(management_url, headers=get_headers(
-        "episode"), json=json_data)
-
-    if res.status_code >= 300:
-        print(f"Could not write episode: {title}")
-        print(res.json())
-
-    return res.json()
+    entry = cm.entries(os.getenv("CONTENTFUL_SPACE_ID"), os.getenv(
+        "CONTENTFUL_ENVIRONMENT")).create(None, json_data)
+    return entry
 
 
 def get_newest_episode():
-    res = requests.get(delivery_url, headers=get_headers("episode"), params={
-        "access_token": os.getenv("CONTENTFUL_ACCESS_TOKEN"),
-        "content_type": "episode",
-        "limit": 1,
-        "order": "-fields.releaseDate"
-    })
-    res = res.json()
-
-    episode = {}
-    try:
-        episode = res["items"][0]["fields"]
-    except:
-        print(f"Error getting newest episode")
-
-    return episode
+    entries = cc.entries(
+        {"limit": 1, "content_type": "episode", "order": "-fields.releaseDate"})
+    if len(entries) == 0:
+        return None
+    return entries[0]["sys"]["id"]
 
 
 def get_guest(name):
