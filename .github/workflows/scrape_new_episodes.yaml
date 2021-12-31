@@ -2,8 +2,8 @@ name: Scrape New Episodes
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "0 10 * * 1,4"
+  # schedule:
+  #   - cron: "0 10 * * 1,4"
 
 jobs:
   run:
